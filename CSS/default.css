@@ -1,0 +1,26 @@
+body {background-color: #7ec0ee;}
+
+#navBar.nav ul {
+   list-style: none;
+   text-align: center;
+}
+
+#navBar.nav ul li {
+   display: inline-block;
+   word-wrap: normal;
+   word-break: normal;
+
+}
+
+.OKReferees {
+  font-size: 72px;
+  text-align: center;
+}
+
+.logo {
+  position: fixed;
+   top: 0px;
+   left: 0px;
+  height: 250px;
+  width: 250px;
+}
