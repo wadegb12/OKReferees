@@ -1,0 +1,24 @@
+Menu Structure
+
+Home
+Policies
+Upgrade
+	Grade 7
+	Grade 6
+	Grade 5
+	Assessment Request (form to email Larry)
+Calendar
+Rules 
+	SRPL
+	OPL\OCL
+	OPC
+	ECNL
+	Rec\Small Sided
+Evaluations (from coaches for referees) (this can be very last)
+Pictures\Awards
+SRC Info
+Links
+	oksoccer.com\referees
+	Classes
+	Misconduct Form
+	
