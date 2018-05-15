@@ -1,7 +1,7 @@
 <?php include 'Default.php'; ?>
 <link type="text/css" rel="stylesheet" href="/../CSS/Utilities.css">
 
-<div class="container grayBackground">
+<div class="container grayBackground hide-on-med-and-down">
   <div class="linePadding">
     <div class="title"> State Referee Chairman </div>
     <div> Richard Brook </div>

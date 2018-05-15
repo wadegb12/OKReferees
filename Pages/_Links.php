@@ -1,6 +1,6 @@
 <?php include 'Default.php'; ?>
 
-<div class="container grayBackground">
+<div class="container grayBackground hide-on-med-and-down">
   <div class="center">
     <div class="linePadding">
       <a href="http://www.oksoccer.com/referee/refereehome/"> OSA Referee Page </a>
