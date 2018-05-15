@@ -6,7 +6,7 @@
       <li><a href="ComingSoon.php"><div class="navBarText"> OPL/OCL </div></a></li>
       <li><a href="ComingSoon.php"><div class="navBarText"> OPC </div></a></li>
       <li><a href="ComingSoon.php"><div class="navBarText"> ECNL </div></a></li>
-      <li><a href="ComingSoon.php"><div class="navBarText"> Rec\Small Sided </div><</a></li>
+      <li><a href="ComingSoon.php"><div class="navBarText"> Rec\Small Sided </div></a></li>
     </ul>
      <ul id="navBar">
         <li><a href="Home.php"><div class="navBarText"> Home </div></a></li>
