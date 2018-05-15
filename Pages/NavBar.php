@@ -17,7 +17,7 @@
         <li><a href="ComingSoon.php">Upgrade</a></li>
         <li><a href="ComingSoon.php">Referee Status</a></li>
         <li><a href="ComingSoon.php">Evaluations</a></li>
-        <li><a href="ComingSoon.php">Links</a></li>
+        <li><a href="_Links.php">Links</a></li>
      </ul>
 
   </div>
