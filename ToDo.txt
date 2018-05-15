@@ -1,0 +1,3 @@
+-allow nav bar items to wrap on smaller screens
+-logo is fixed to screen. doesn't go up when scrolling
+-nav bar drop down should appear below the nav bar item

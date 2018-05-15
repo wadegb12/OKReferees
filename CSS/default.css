@@ -16,9 +16,9 @@ nav.nav-center ul li a {
 }
 
 .logo {
-  position: fixed;
-   top: 0px;
-   left: 0px;
+  float: left;
+  top: 0px;
+  left: 0px;
   height: 250px;
   width: 250px;
 }
