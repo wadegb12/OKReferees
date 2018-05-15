@@ -28,6 +28,10 @@ nav.nav-center ul li a {
   width: 108px;
 }
 
+.navBarText {
+  font-size: 11px;
+}
+
 .grayBackground {
   background-color: #f2f2ef;
 }
