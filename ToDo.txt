@@ -1,2 +1,10 @@
--nav bar drop down should appear below the nav bar item
+BUGS:
+
+- nav bar drop down should appear below the nav bar item
 - center OK referees
+
+
+FUTURE:
+
+- add Jeremy to SRC page
+- Dashboard
