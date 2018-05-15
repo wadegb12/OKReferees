@@ -1,15 +1,13 @@
-body {background-color: #7ec0ee;}
 
-#navBar.nav ul {
-   list-style: none;
-   text-align: center;
+nav.nav-center ul {
+    text-align: center;
 }
-
-#navBar.nav ul li {
-   display: inline-block;
-   word-wrap: normal;
-   word-break: normal;
-
+nav.nav-center ul li {
+    display: inline;
+    float: none;
+}
+nav.nav-center ul li a {
+  display: inline-block;
 }
 
 .OKReferees {
@@ -23,4 +21,17 @@ body {background-color: #7ec0ee;}
    left: 0px;
   height: 250px;
   width: 250px;
+}
+
+.logoSize {
+  height:108px;
+  width: 108px;
+}
+
+.grayBackground {
+  background-color: #f2f2ef;
+}
+
+.linePadding {
+  padding:10px;
 }
