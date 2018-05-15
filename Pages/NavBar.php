@@ -9,7 +9,7 @@
       <li><a href="ComingSoon.php">Rec\Small Sided</a></li>
     </ul>
      <ul id="navBar">
-        <li><a href="ComingSoon.php">Home</a></li>
+        <li><a href="Home.php">Home</a></li>
         <li><a href="ComingSoon.php">Policies</a></li>
         <li><a href="ComingSoon.php">Calander</a></li>
         <li><a class="dropdown-button" data-coverTrigger="false" data-activates="rulesDropdown" data-hover="true" >Rules</a></li>

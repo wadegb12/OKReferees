@@ -2,6 +2,6 @@
 
 <div class="container grayBackground">
   <div class="linePadding">
-    Coming Soon
+    Home
   </div>
 </div>
