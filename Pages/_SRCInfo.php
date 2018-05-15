@@ -3,7 +3,8 @@
 
 <div class="container grayBackground hide-on-med-and-down">
   <div class="row linePadding">
-    <div class="col s6">
+    <div class="col s2"></div>
+    <div class="col s4">
       <div class="center">
         <div class="title"> State Referee Chairman </div>
         <div> Richard Brook </div>
@@ -12,14 +13,16 @@
         <div> Richard@oksoccer.com </div>
       </div>
     </div>
-    <div class="col s6">
+    <div class="col s4">
       <div class="center">
         <img class="srcPhoto" src="/../Photos/RichardBrook.JPG">
       </div>
     </div>
+    <div class="col s2"></div>
   </div>
   <div class="row linePadding">
-    <div class="col s6">
+    <div class="col s2"></div>
+    <div class="col s4">
       <div class="center">
         <div class="title"> State Referee Administrator </div>
         <div> Ronald Poulsen </div>
@@ -28,14 +31,16 @@
         <div> ron@oksoccer.com </div>
       </div>
     </div>
-    <div class="col s6">
+    <div class="col s4">
       <div class="center">
         <img class="srcPhoto" src="/../Photos/RonPoulsen.jpg">
       </div>
     </div>
+    <div class="col s2"></div>
   </div>
   <div class="row linePadding">
-    <div class="col s6">
+    <div class="col s2"></div>
+    <div class="col s4">
       <div class="center">
         <div class="title"> State Youth Referee Administrator </div>
         <div> Nate Hopkins </div>
@@ -44,14 +49,16 @@
         <div> nate@oksoccer.com </div>
       </div>
     </div>
-    <div class="col s6">
+    <div class="col s4">
       <div class="center">
         <img class="srcPhoto" src="/../Photos/NateHopkins.PNG">
       </div>
     </div>
+    <div class="col s2"></div>
   </div>
   <div class="row linePadding">
-    <div class="col s6">
+    <div class="col s2"></div>
+    <div class="col s4">
       <div class="center">
         <div class="title"> State Director of Assessment </div>
         <div> Larry Morgan </div>
@@ -60,14 +67,16 @@
         <div> bokconstr@aol.com </div>
       </div>
     </div>
-    <div class="col s6">
+    <div class="col s4">
       <div class="center">
         <img class="srcPhoto" src="/../Photos/LarryMorgan.png">
       </div>
     </div>
+    <div class="col s2"></div>
   </div>
   <div class="row linePadding">
-    <div class="col s6">
+    <div class="col s2"></div>
+    <div class="col s4">
       <div class="center">
         <div class="title"> State Director of Instruction </div>
         <div> Jim Brittain </div>
@@ -76,14 +85,16 @@
         <div> jimb@pobox.com </div>
       </div>
     </div>
-    <div class="col s6">
+    <div class="col s4">
       <div class="center">
         <img class="srcPhoto" src="/../Photos/JimBrittain.JPG">
       </div>
     </div>
+    <div class="col s2"></div>
   </div>
   <div class="row linePadding">
-    <div class="col s6">
+    <div class="col s2"></div>
+    <div class="col s4">
       <div class="center">
         <div class="title"> State Director of Assignment </div>
         <div> Darron Killman </div>
@@ -92,11 +103,12 @@
         <div> Darron.killman@sbcglobal.net </div>
       </div>
     </div>
-    <div class="col s6">
+    <div class="col s4">
       <div class="center">
         <img class="srcPhoto" src="/../Photos/DarronKillman.JPG">
       </div>
     </div>
+    <div class="col s2"></div>
   </div>
 
 </div>
