@@ -1,7 +1,7 @@
 <?php include 'Default.php'; ?>
 <link type="text/css" rel="stylesheet" href="/../CSS/Utilities.css">
 
-<div class="container grayBackground hide-on-med-and-down">
+<div class="hide-on-med-and-down container grayBackground linePadding">
   <div class="row linePadding">
     <div class="col s2"></div>
     <div class="col s4">
@@ -110,5 +110,22 @@
     </div>
     <div class="col s2"></div>
   </div>
-
+  <div class="row linePadding">
+    <div class="col s2"></div>
+    <div class="col s4">
+      <div class="center">
+        <div class="title"> State Game Assignor </div>
+        <div> Jeremy Crockett </div>
+        <div> Bartlesvile, OK  ?????????</div>
+        <div> 918-923-0014 </div>
+        <div> email? </div>
+      </div>
+    </div>
+    <div class="col s4">
+      <div class="center">
+        <img class="srcPhoto" src="/../Photos/JeremyCrockett.jpg">
+      </div>
+    </div>
+    <div class="col s2"></div>
+  </div>
 </div>
