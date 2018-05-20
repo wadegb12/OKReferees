@@ -10,8 +10,8 @@
     <body>
 
       <div class="hide-on-med-and-down">
-        <?php include 'Header.php'; ?>
-        <?php include 'NavBar.php'; ?>
+        <?php include 'DefaultViews/Header.php'; ?>
+        <?php include 'DefaultViews/NavBar.php'; ?>
       </div>
 
       <div class="hide-on-large-only">

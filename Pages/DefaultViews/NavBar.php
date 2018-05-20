@@ -17,11 +17,11 @@
             <div class="navBarText"> Rules </div>
           </a>
         </li>
-        <li><a href="_SRCInfo.php"><div class="navBarText"> SRC Info </div></a></li>
+        <li><a href="SRCInfo.php"><div class="navBarText"> SRC Info </div></a></li>
         <li><a href="ComingSoon.php"><div class="navBarText"> Upgrade </div></a></li>
-        <li><a href="ComingSoon.php"><div class="navBarText"> Referee Status </div></a></li>
+        <li><a href="RefereeStatus.php"><div class="navBarText"> Referee Status </div></a></li>
         <li><a href="ComingSoon.php"><div class="navBarText"> Evaluations </div></a></li>
-        <li><a href="_Links.php"><div class="navBarText"> Links </div></a></li>
+        <li><a href="Links.php"><div class="navBarText"> Links </div></a></li>
      </ul>
 
   </div>
