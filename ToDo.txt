@@ -1,6 +1,5 @@
 BUGS:
 
-- nav bar drop down should appear below the nav bar item
 - center OK referees title
 
 

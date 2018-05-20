@@ -1,3 +1,5 @@
+
+
 <nav class="#000080 nav-center z-depth-1">
   <div class="container">
 
@@ -13,7 +15,7 @@
         <li><a href="ComingSoon.php"><div class="navBarText"> Policies </div></a></li>
         <li><a href="ComingSoon.php"><div class="navBarText"> Calander </div></a></li>
         <li>
-          <a class="dropdown-button" data-coverTrigger="false" data-activates="rulesDropdown" data-hover="true">
+          <a class="dropdown-button" data-beloworigin="true" data-activates="rulesDropdown" data-hover="true">
             <div class="navBarText"> Rules </div>
           </a>
         </li>
