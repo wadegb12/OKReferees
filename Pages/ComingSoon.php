@@ -1,6 +1,6 @@
 <?php include 'Default.php'; ?>
 
-<div class="container grayBackground">
+<div class="hide-on-med-and-down container grayBackground">
   <div class="linePadding">
     Coming Soon
   </div>
