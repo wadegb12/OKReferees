@@ -11,17 +11,16 @@ nav.nav-center ul li a {
   text-align: center;
 }
 
-.OKReferees {
+.title {
   font-size: 72px;
+  position: relative;
   text-align: center;
 }
 
 .logo {
   float: left;
-  top: 0px;
-  left: 0px;
-  height: 250px;
-  width: 250px;
+  height: 108px;
+  width: 108px;
 }
 
 .logoSize {

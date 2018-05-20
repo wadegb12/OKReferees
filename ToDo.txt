@@ -1,6 +1,5 @@
 BUGS:
 
-- center OK referees title
 
 
 FUTURE:
