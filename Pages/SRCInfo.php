@@ -116,9 +116,9 @@
       <div class="center">
         <div class="srcTitle"> State Game Assignor </div>
         <div> Jeremy Crockett </div>
-        <div> Bartlesvile, OK  ?????????</div>
+        <div> Claremore, OK </div>
         <div> 918-923-0014 </div>
-        <div> email? </div>
+        <div> crockett.jeremy@gmail.com </div>
       </div>
     </div>
     <div class="col s4">
