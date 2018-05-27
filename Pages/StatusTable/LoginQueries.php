@@ -1,10 +1,10 @@
 <?php
 include 'DatabaseConnection.php';
 $conn = connectToLocalDB();
-getData($conn);
+canLogin($conn);
 
-  function getData($conn) {
-    $sql = "SELECT * FROM referee_status";
+  function canLogin($conn) {
+    $sql = "SELECT * FROM login_validator";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
