@@ -114,7 +114,7 @@
     <div class="col s2"></div>
     <div class="col s4">
       <div class="center">
-        <div class="srcTitle"> State Game Assignor test</div>
+        <div class="srcTitle"> State Game Assignor </div>
         <div> Jeremy Crockett </div>
         <div> Claremore, OK </div>
         <div> 918-923-0014 </div>
