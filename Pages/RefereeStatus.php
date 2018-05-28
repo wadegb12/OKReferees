@@ -6,11 +6,14 @@
   $conn = connectToLocalDB();
   $rows = get7Data($conn);
   if ($rows != null) {
-    echo createDataTable($rows);
+    $table = createDataTable($rows);
   }
 ?>
 
 <div class="container grayBackground hide-on-med-and-down">
   <script type="text/javascript" src="/../JS/StatusTable.js"></script>
 
+  <div> <?php echo $table ?>
+  </div>
+  
 </div>
