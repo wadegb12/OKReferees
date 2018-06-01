@@ -28,6 +28,7 @@
         <script type="text/javascript" src="/../materialize/js/materialize.min.js"></script>
         <script type="text/javascript" src="/../JS/default.js"></script>
         <script type="text/javascript" src="/../JS/datatables.min.js"></script>
+        <script type="text/javascript" src="/../JS/StatusTable.js"></script>
 
       <div>
     </footer>
