@@ -1,5 +1,4 @@
 <?php include 'Default.php'; ?>
-<link type="text/css" rel="stylesheet" href="/../CSS/Utilities.css">
 
 <div class="hide-on-med-and-down container grayBackground linePadding">
   <div class="row linePadding">

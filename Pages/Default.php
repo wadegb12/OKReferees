@@ -6,6 +6,7 @@
       <link type="text/css" rel="stylesheet" href="/../materialize/css/materialize.min.css"  media="screen,projection"/>
       <link type="text/css" rel="stylesheet" href="/../CSS/default.css">
       <link rel="stylesheet" type="text/css" href="/../CSS/datatables.min.css"/>
+      <link type="text/css" rel="stylesheet" href="/../CSS/Utilities.css">
     </head>
 
     <body>
@@ -27,6 +28,7 @@
         <script type="text/javascript" src="/../materialize/js/materialize.min.js"></script>
         <script type="text/javascript" src="/../JS/default.js"></script>
         <script type="text/javascript" src="/../JS/datatables.min.js"></script>
+
       <div>
     </footer>
   </html>
