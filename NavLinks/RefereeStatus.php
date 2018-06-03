@@ -3,6 +3,7 @@
   include(dirname(__FILE__). '/../DefaultViews/defaultDataTable.php');
   include(dirname(__FILE__). '/../StatusTable/StatusQueries.php');
   
+  $remove = "this is where you will edit values on the table below";
   $user = "";
   if(isset($_SESSION['login_user'])){
     $user = $_SESSION['login_user'];
@@ -19,7 +20,9 @@
     <div>
       <?php
         if($user != "") {
-          echo $user;
+          echo '<div> Username: ' . $user . '</div>';
+          echo '<div>' . $remove . '</div>';
+          echo '<br>';
         }
         if($table != null) {
           echo $table;
