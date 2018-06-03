@@ -1,6 +1,6 @@
 $( document ).ready(function() {
     $(".loginLink").click(function() {
-        $("#modal, .popup-content").addClass("active");
+        $("#modal").addClass("active");
     });
 
     $(".logoutLink").click(function() {
@@ -8,9 +8,7 @@ $( document ).ready(function() {
     });
 
     $(".close").click(function() {
-        $("#modal, .popup-content").removeClass("active");
+        $("#modal").removeClass("active");
     });
-
-    
 
 });

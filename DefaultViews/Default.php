@@ -15,7 +15,7 @@
       <div class="hide-on-med-and-down">
         <?php include(dirname(__FILE__). '/Header.php'); ?>
         <?php include(dirname(__FILE__). '/NavBar.php'); ?>
-        <?php include(dirname(__FILE__). '/LoginModal.php'); ?>
+        <?php include(dirname(__FILE__). '/../App/login.php'); ?>
         
       </div>
 

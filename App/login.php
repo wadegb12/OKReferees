@@ -9,6 +9,8 @@
   if (isset($_POST['submit'])) {
     if (empty($_POST['username']) || empty($_POST['password'])) {
       $error = "Username or Password is invalid";
+
+      //include(dirname(__FILE__). '/../DefaultViews/LoginModal.php');
     }
     else
     {
@@ -41,21 +43,21 @@
 ?>
 <!DOCTYPE html>
 <html>
-  <head>
-  
-  <div id="login">
-  <h2>Login Form</h2>
-  <form action="" method="post">
-  <label>UserName :</label>
-  <input id="name" name="username" type="text">
-  <label>Password :</label>
-  <input id="password" name="password" type="password">
-  <input name="submit" type="submit" value=" Login ">
-  <span> <?php echo $error; ?>
-  </span>
-  </form>
+  <div id='modal'>
+    <div class='modal-content'> 
+      <span class="close">&times;</span>
+      <div id="login">
+        <h2>Login Form</h2>
+        <form action="" method="post">
+          <label>UserName :</label>
+          <input id="name" name="username" type="text">
+          <label>Password :</label>
+          <input id="password" name="password" type="password">
+          <input name="submit" type="submit" value=" Login ">
+          <span> <?php echo $error; ?> </span>
+        </form>
+      </div>
+    </div>
   </div>
-  </div>
-  </body>
 </html>
 
