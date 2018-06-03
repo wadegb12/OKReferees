@@ -1,5 +1,6 @@
 <?php
 include 'DatabaseConnection.php';
+include(dirname(__FILE__). '/../DefaultViews/defaultDataTable.php');
 
   function get7Data($conn) {
     $sql = "SELECT full_name as 'Name', grade as 'Grade', recertification_clinic as 'Recert Clinic', ";
@@ -16,9 +17,20 @@ include 'DatabaseConnection.php';
   }
 
   function getTable($conn) {
-    $rows = get7Data($conn);
-    if ($rows != null || $rows != []) {
-      $table = createDataTable($rows);
+    $result = get7Data($conn);
+
+    if ($result != null || $result != []) {
+      $table = createDataTable($result);
     }
+    else {
+      $table = getBlankTable();
+    }
+    return $table;
+  }
+
+  function getBlankTable() {
+    $result = [];
+    $table = createDataTable($result);
+
     return $table;
   }
