@@ -4,7 +4,10 @@
     session_start();
   }
   
-  if(!isset($_SESSION['login_user'])){
+  if(isset($_SESSION['login_user'])){
+    $class .= ' logoutLink';
+  }
+  else {
     $class .= ' loginLink';
   } 
 ?>
