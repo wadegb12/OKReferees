@@ -1,3 +1,3 @@
 <?php 
-include 'Home.php'; 
+    include 'logout.php';
 ?>
