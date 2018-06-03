@@ -4,5 +4,5 @@
   {
     $_SESSION = [];
   }
-  include 'Home.php'; 
+  header('Location: /../NavLinks/Home.php'); 
 ?>

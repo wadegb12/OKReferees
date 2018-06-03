@@ -12,8 +12,8 @@
     <body>
 
       <div class="hide-on-med-and-down">
-        <?php include 'DefaultViews/Header.php'; ?>
-        <?php include 'DefaultViews/NavBar.php'; ?>
+        <?php include(dirname(__FILE__). '/Header.php'); ?>
+        <?php include(dirname(__FILE__). '/NavBar.php'); ?>
       </div>
 
       <div class="hide-on-large-only">

@@ -1,7 +1,7 @@
 <?php
-  include 'Default.php';
-  include 'DefaultViews\defaultDataTable.php';
-  include 'StatusTable/StatusQueries.php';
+  include(dirname(__FILE__). '/../DefaultViews/Default.php');
+  include(dirname(__FILE__). '/../DefaultViews/defaultDataTable.php');
+  include(dirname(__FILE__). '/../StatusTable/StatusQueries.php');
   
   $user = "";
   if(isset($_SESSION['login_user'])){

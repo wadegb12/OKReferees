@@ -25,7 +25,7 @@
 
       if ($rows) {
         $_SESSION['login_user']=$username;
-        header("location: Home.php");
+        header("location: /../NavLinks/Home.php");
       } else {
           $error = "Username or Password is invalid";
       }
