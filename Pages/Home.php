@@ -1,4 +1,6 @@
-<?php include 'Default.php'; ?>
+<?php 
+include 'Default.php'; 
+?>
 
 <div class="container grayBackground">
   <div class="linePadding">
