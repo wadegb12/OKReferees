@@ -5,7 +5,8 @@ FUTURE:
   -login icon location
   -add login/logout dropdown for login icon
   -admin screen with queries to update dashboard
-
+  -needs error message on login attempts
+  
 FUTURE: Dashboard
   -fix the features on the corner of the data table
   -add title
