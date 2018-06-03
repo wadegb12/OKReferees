@@ -5,14 +5,17 @@
   
   $remove = "this is where you will edit values on the table below";
   $user = "";
+  $table = "";
   if(isset($_SESSION['login_user'])){
     $user = $_SESSION['login_user'];
   }
 
   $conn = connectToLocalDB();
-  $rows = get7Data($conn);
-  if ($rows != null) {
-    $table = createDataTable($rows);
+  if(is_a($conn, 'mysqli')) {
+    $table = getTable($conn);
+  }
+  else {
+    $table = "Failed to connect to database";
   }
 ?>
 
@@ -24,7 +27,7 @@
           echo '<div>' . $remove . '</div>';
           echo '<br>';
         }
-        if($table != null) {
+        if($table != "") {
           echo $table;
         }
       ?>

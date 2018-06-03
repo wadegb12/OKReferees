@@ -14,3 +14,11 @@ include 'DatabaseConnection.php';
 
     return $result;
   }
+
+  function getTable($conn) {
+    $rows = get7Data($conn);
+    if ($rows != null || $rows != []) {
+      $table = createDataTable($rows);
+    }
+    return $table;
+  }

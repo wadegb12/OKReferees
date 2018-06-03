@@ -32,10 +32,17 @@
     $USERNAME = "root";
     $PASSWORD = "Anorakleet12";
 
-    $conn = new mysqli($SERVER_NAME, $USERNAME, $PASSWORD, $DB_NAME);
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
+    $driver = new mysqli_driver();
+    $driver->report_mode = MYSQLI_REPORT_STRICT | MYSQLI_REPORT_ERROR;
+
+    try {
+      $conn = new mysqli($SERVER_NAME, $USERNAME, $PASSWORD, $DB_NAME);
     }
+    catch (mysqli_sql_exception $e) {
+      return "";
+    }
+    
+    
     return $conn;
   }
 ?>
