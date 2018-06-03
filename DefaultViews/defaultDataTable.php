@@ -2,21 +2,19 @@
   function createDataTable($result) 
   {
     $html = "";
+    $html .= "<table id=\"status_table\" class=\"display\" style=\"width:100%\">";
 
     if($result == [])
     {
       $result = getDefaultRows();
-
-      $html .= "<table id=\"status_table\" class=\"display\" style=\"width:100%\">";
       $html .= "<thead>" . addColumns($result) . "</thead>";
-      $html .= "</table>";
     }
     else {
-      $html .= "<table id=\"status_table\" class=\"display\" style=\"width:100%\">";
       $html .= "<thead>" . addColumns($result) . "</thead>";
       $html .= "<tbody>" . addRows($result) . "</tbody>";
-      $html .= "</table>";
     } 
+    
+    $html .= "</table>";
     
     return $html;
   }

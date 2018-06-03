@@ -3,7 +3,6 @@
   {
     $SERVER_NAME = "23.229.183.230:3306";
     $DB_NAME = "RefereeTracking";
-    $TABLE = "referee_status";
     $USERNAME = "refereeAdm";
     $PASSWORD = "WOll3yD3r";
 
@@ -12,14 +11,6 @@
 
     try {
       $conn = new mysqli($SERVER_NAME, $USERNAME, $PASSWORD, $DB_NAME);
-      $sql = "SELECT * FROM table";
-      $result = $conn->query($sql);
-
-      if ($result->num_rows > 0) {
-        return "got data";
-      } else {
-        return "0 results";
-      }
     }
     catch (mysqli_sql_exception $e) {
       return "";
