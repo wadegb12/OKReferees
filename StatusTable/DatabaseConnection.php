@@ -7,22 +7,23 @@
     $USERNAME = "refereeAdm";
     $PASSWORD = "WOll3yD3r";
 
-    // Create connection
-    $conn = new mysqli($SERVER_NAME, $USERNAME, $PASSWORD, $DB_NAME);
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
+    $driver = new mysqli_driver();
+    $driver->report_mode = MYSQLI_REPORT_STRICT | MYSQLI_REPORT_ERROR;
 
-    $sql = "SELECT * FROM table";
-    $result = $conn->query($sql);
+    try {
+      $conn = new mysqli($SERVER_NAME, $USERNAME, $PASSWORD, $DB_NAME);
+      $sql = "SELECT * FROM table";
+      $result = $conn->query($sql);
 
-    if ($result->num_rows > 0) {
-      echo "got data";
-    } else {
-        echo "0 results";
+      if ($result->num_rows > 0) {
+        return "got data";
+      } else {
+        return "0 results";
+      }
     }
-    $conn->close();
+    catch (mysqli_sql_exception $e) {
+      return "";
+    }
   }
 
   function connectToLocalDB()
