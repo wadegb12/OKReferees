@@ -1,3 +1,7 @@
+USE RefereeTracking
+
+Go
+
 CREATE TABLE login_validator (
     id int(10) NOT NULL AUTO_INCREMENT,
     username varchar(50),
