@@ -6,7 +6,7 @@ CREATE TABLE Ref6Maint (
         Cert_Year int(4),
 	Name char(50),
         Up_Main char(12),
-	Current_Grade int,
+	Current_Grade int(1),
 	New_Grade int(1),
 	Pass_Fail bit,
 	Assm_1_Pass bit,
