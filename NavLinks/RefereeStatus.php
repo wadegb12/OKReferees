@@ -1,6 +1,6 @@
 <?php
   include(dirname(__FILE__). '/../DefaultViews/Default.php');
-  include(dirname(__FILE__). '/../StatusTable/StatusQueries.php');
+  include_once(dirname(__FILE__). '/../StatusTable/StatusQueries.php');
   
   $remove = "this is where you will edit values on the table below";
   $user = "";
