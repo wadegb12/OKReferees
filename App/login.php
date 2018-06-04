@@ -14,7 +14,7 @@
     }
     else
     {
-      $connection = connectToLocalDB();
+      $connection = connectToDB();
       if(is_a($connection, 'mysqli')) {
         $username=$_POST['username'];
         $password=$_POST['password'];

@@ -10,7 +10,7 @@
     $user = $_SESSION['login_user'];
   }
 
-  $conn = connectToLocalDB();
+  $conn = connectToDB();
   if(is_a($conn, 'mysqli')) {
     $table = getTable($conn);
   }
