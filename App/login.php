@@ -1,5 +1,5 @@
 <?php
-   include(dirname(__FILE__). '/../StatusTable/DatabaseConnection.php');
+   include_once(dirname(__FILE__). '/../StatusTable/DatabaseConnection.php');
 
   if(!isset($_SESSION)) {
     session_start();

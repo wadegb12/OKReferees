@@ -1,5 +1,5 @@
 <?php
-include 'DatabaseConnection.php';
+include_once 'DatabaseConnection.php';
 include(dirname(__FILE__). '/../DefaultViews/defaultDataTable.php');
 
   function get7Data($conn) {
