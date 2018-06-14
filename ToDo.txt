@@ -1,16 +1,7 @@
-BUGS:
-  -database exploits
 
-FUTURE:
-  -login icon location
-  -add login/logout dropdown for login icon
-  -admin screen with queries to update dashboard
+login
+status table
+status table queries (ajax to actions for query buttons?)
 
-FUTURE: Dashboard
-  -fix the features on the corner of the data table
-  -add title
-  -add filter by Grade
-  -sorting by columns
-  -make data table responsive to page size
-  -add checkboxes instead of database values to Dashboard
-  -display maintenance and upgrade requirements per grades showing
+
+src photos broken
