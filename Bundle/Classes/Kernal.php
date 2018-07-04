@@ -32,10 +32,9 @@
       private function redirectToController() {
         $controller = $this->kernalRoute->getController();
         $action = $this->kernalRoute->getAction();
-        $view = $this->kernalRoute->getView();
 
         $redirectToController = new $controller();
-        $redirectToController->$action($view);
+        $redirectToController->$action();
       }
 
       private function includeController() {

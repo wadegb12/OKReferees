@@ -3,12 +3,12 @@
     global $routes;
 
     $routesList = array(
-        new Route('', 'HomeController', 'index', 'home'),
-        new Route('/comingSoon' ,'ComingSoonController', 'index', 'comingSoon'),
-        new Route('/home', 'HomeController', 'index', 'home'),
-        new Route('/links', 'LinksController', 'index', 'links'),
-        new Route('/srcContacts' ,'SRCContactsController', 'index', 'srcContacts'),
-        new Route('/refereeStatus' ,'RefereeStatusController', 'index', 'refereeStatus')
+        new Route('', 'HomeController', 'index'),
+        new Route('/comingSoon' ,'ComingSoonController', 'index'),
+        new Route('/home', 'HomeController', 'index'),
+        new Route('/links', 'LinksController', 'index'),
+        new Route('/srcContacts' ,'SRCContactsController', 'index'),
+        new Route('/refereeStatus' ,'RefereeStatusController', 'index')
     );
 
     $routes = $routesList;

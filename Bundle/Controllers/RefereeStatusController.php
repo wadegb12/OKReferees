@@ -1,6 +1,6 @@
 <?php
     class RefereeStatusController extends AbstractController {
-        public function index($view) {
+        public function index() {
             
             // if(isset($_SESSION['login_user'])){
             //   $user = $_SESSION['login_user'];
@@ -9,7 +9,7 @@
             // $conn = connectToDB();
             // $table = getRefereeStatusTable($conn);
 
-            $this->render($view);
+            $this->render("refereeStatus");
         }
 
         private function getRefereeStatusTable($conn) {

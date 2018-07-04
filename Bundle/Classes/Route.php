@@ -3,13 +3,11 @@
         public $route;
         public $controller;
         public $action;
-        public $view;
 
-        function __construct($route, $controller, $action, $view) {
+        function __construct($route, $controller, $action) {
             $this->route = $route;
             $this->controller = $controller;
             $this->action = $action;
-            $this->view = $view;
         }
 
         public function getActiveRoute($function) {
@@ -40,10 +38,6 @@
 
         public function getAction() {
             return $this->action;
-        }
-
-        public function getView() {
-            return $this->view;
         }
         
 
