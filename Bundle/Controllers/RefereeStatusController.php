@@ -1,22 +1,20 @@
 <?php
     class RefereeStatusController extends AbstractController {
-        public $db;
+        private $db;
+        private $defaultInclude = "include(dirname(__FILE__). '/../Views/default.php')";
+        private $table;
+        private $interactiveQueries;
+        
 
         public function index() {
             $this->db = new Database();
-            $conn = $this->db->exeQuery("test");
-            // $table = getRefereeStatusTable($conn);
+            $result = $this->db->exeQuery("test");
 
 
-            $test = "test";
+            
+            $this->buildView($result);
 
-            ob_start(); ?>
-            <?php include(dirname(__FILE__). '/../Views/default.php') ?>
-            <div>HTML goes here...</div>
-            <div><?php echo $test ?></div>
-            <?php $string = ob_get_clean(); 
-
-            $this->renderHTML($string);
+            $this->renderHTML($this->view);
         }
 
 
@@ -30,6 +28,20 @@
             }
 
             return $table;
+        }
+
+        private function buildView($result) {
+            ob_start(); 
+            // $this->defaultInclude
+            include(dirname(__FILE__). '/../Views/default.php') ?>
+            <div><?php echo $result ?></div>
+
+            <?php $this->view = ob_get_clean(); 
+
+
+
+
+
         }
     }
 

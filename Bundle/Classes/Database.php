@@ -28,16 +28,21 @@
         public function exeQuery($query) {
             $conn = self::connect();
             if(is_a($conn, 'mysqli')) {
-                $result = $conn->query($sql);
+                try {
+                    $result = $conn->query($query);
 
-                if ($result->num_rows === 0) {
-                    return null;
+                    if ($result->num_rows === 0) {
+                        return null;
+                    }
+              
+                    return $result;
                 }
-          
-                return $result;
+                catch (mysqli_sql_exception $e) {
+                    return $e;
+                }
             }
             else {
-                return $conn;
+                // couldnt connect to db
             }
         }
     }

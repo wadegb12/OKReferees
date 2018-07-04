@@ -36,7 +36,7 @@
       }
 
       private function dieOnInvalidRoute() {
-        if(is_null($this->kernalRoute)) {
+        if(is_null($this->route)) {
           die( 'Invalid route.' );
         }
       }
