@@ -11,4 +11,8 @@
         public function render($view) {
             require_once("./Bundle/Views/" . $view . ".php");
         }
+
+        public function renderHTML($string) {
+            echo $string;
+        }
     }

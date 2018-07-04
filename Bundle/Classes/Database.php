@@ -1,14 +1,17 @@
 <?php   
     class Database {
 
-        public $SERVER_NAME;
-        public $DB_NAME;
-        public $USERNAME;
-        public $PASSWORD;
+        // private $SERVER_NAME = "23.229.183.230:3306";
+        // private $DB_NAME = "RefereeTracking";
+        // private $USERNAME = "refereeAdm";
+        // private $PASSWORD = "WOll3yD3r";
+        private $SERVER_NAME = "localhost:3306";
+        private $DB_NAME = "local_referee_tracking";
+        private $USERNAME = "root";
+        private $PASSWORD = "Anorakleet12";
 
         private function connect() {
             
-        
             $driver = new mysqli_driver();
             $driver->report_mode = MYSQLI_REPORT_STRICT | MYSQLI_REPORT_ERROR;
         
@@ -16,7 +19,7 @@
               $conn = new mysqli($this->SERVER_NAME, $this->USERNAME, $this->PASSWORD, $this->DB_NAME);
             }
             catch (mysqli_sql_exception $e) {
-              return "";
+                return $e;
             }
             
             return $conn;
@@ -32,6 +35,9 @@
                 }
           
                 return $result;
+            }
+            else {
+                return $conn;
             }
         }
     }
