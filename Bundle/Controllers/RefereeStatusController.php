@@ -1,48 +1,59 @@
 <?php
     class RefereeStatusController extends AbstractController {
-        private $db;
-        private $defaultInclude = "include(dirname(__FILE__). '/../Views/default.php')";
-        private $table;
-        private $interactiveQueries;
+        private $conn;
+        private $error = "";
+        private $statusTable = "";
+        private $interactiveQueries = "";
         
 
         public function index() {
-            $this->db = new Database();
-            $result = $this->db->exeQuery("test");
+            $this->conn = new Database();
 
+            if($this->isValidConnToDB($this->conn)) {
+                $this->createQueries();
+                $this->createRefereeStatusTable();
+            }
+            else {
+                //show error
+                $this->error = $this->conn;
+            }
 
-            
-            $this->buildView($result);
-
+            $this->buildView();
             $this->renderHTML($this->view);
         }
 
-
-        private function getRefereeStatusTable($conn) {
-            if(is_a($conn, 'mysqli')) {
-                $table = getTable($conn);
+        private function isValidConnToDB() {
+            if(is_a($this->conn, 'mysqli')) {
+                return true;
             }
-            else {
-                $table = getBlankTable();
-                // $tableInfo = "Failed to connect to database";
-            }
-
-            return $table;
+            return false;
         }
 
-        private function buildView($result) {
+        private function buildView() {
             ob_start(); 
-            // $this->defaultInclude
             include(dirname(__FILE__). '/../Views/default.php') ?>
-            <div><?php echo $result ?></div>
+            
+            <div class="hide-on-med-and-down container grayBackground">
+                <div class="linePadding">
+                    <div><?php echo $this->interactiveQueries ?></div>
+                    <div><?php echo $this->statusTable ?></div>
+                </div>
+            </div>
+            
 
             <?php $this->view = ob_get_clean(); 
-
-
-
-
-
         }
+
+        private function createQueries() {
+            
+        }
+
+
+        private function createRefereeStatusTable() {
+            
+        }
+
+        
     }
 
 
