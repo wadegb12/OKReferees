@@ -10,7 +10,10 @@
         private $USERNAME = "root";
         private $PASSWORD = "Anorakleet12";
 
-        private function connect() {
+        public $conn;
+        public $error;
+
+        public function __construct() {
             
             $driver = new mysqli_driver();
             $driver->report_mode = MYSQLI_REPORT_STRICT | MYSQLI_REPORT_ERROR;
@@ -19,17 +22,17 @@
               $conn = new mysqli($this->SERVER_NAME, $this->USERNAME, $this->PASSWORD, $this->DB_NAME);
             }
             catch (mysqli_sql_exception $e) {
-                return $e;
+                $this->error = $e;
+                return "";
             }
             
-            return $conn;
+            $this->conn = $conn;
         }
 
         public function exeQuery($query) {
-            $conn = self::connect();
-            if(is_a($conn, 'mysqli')) {
+            if(is_a($this->conn, 'mysqli')) {
                 try {
-                    $result = $conn->query($query);
+                    $result = $this->conn->query($query);
 
                     if ($result->num_rows === 0) {
                         return null;
