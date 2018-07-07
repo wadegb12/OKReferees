@@ -1,7 +1,23 @@
 
-login
+TODO:
+
 status table
+-put multiple assessments on the same line for a referee
+-make blank table and table with info have same columns
+-table ui
+
 status table queries (ajax to actions for query buttons?)
 
+login
+
+login database
+
+audit
+
+audit database
+
+
+
+BUGS: 
 
 src photos broken
