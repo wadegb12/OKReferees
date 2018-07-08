@@ -4,17 +4,33 @@
         private $error = "";
         private $mysqlExcption = "";
         private $statusData;
+        private $assessmentData;
+        private $statusTableData = array();
         private $statusTable = "";
         private $interactiveQueries = "";
         
 
         public function index() {
             $this->db = new Database();
+            $this->queries = new Queries();
+            $this->table = new Table();
+            $this->exceptionHandler = new ExceptionHandler();
 
-            if($this->isValidConnToDB($this->db->conn)) {
-                $this->getStatusData();
+
+            if($this->exceptionHandler->isValidConnToDB($this->db->conn)) {
+                $this->statusData = $this->db->exeQuery($this->queries->getStatusesQuery());
+                $this->assessmentData = $this->db->exeQuery($this->queries->getAssessmentsQuery());
+
+                $refereeAssessments = $this->getRefereeAssessments();
+                $this->mergeStatusWithAssessments($refereeAssessments);
+                $this->statusTableData = $this->removeId($this->statusTableData);
+                
+                $this->statusTableData[1]['Assessment 2'] = "-";
+                $this->statusTableData[1]['Assessment 3'] = "-";
+                $this->statusTable = $this->createStatusTable($this->statusTableData);
+
+                
                 // $this->createQueries();
-                $this->createStatusTable();
             }
             else {
                 $this->error = "Could not connect to Database";
@@ -45,68 +61,68 @@
             
         // }
 
-        private function createStatusTable() {
+        private function createStatusTable($tableData) {
+            $table = "";
+
             if(is_null($this->statusData)) {
-                $this->createDataTable([]);
+                $table = $this->table->createDataTable([]);
             }
-            else if($this->isMysqliException($this->statusData)) {
+            else if($this->exceptionHandler->isMysqliException($this->statusData)) {
                 $this->mysqlExcption = $this->statusData;
-                $this->createDataTable([]);
+                $table = $this->table->createDataTable([]);
             }
             else {
-                $this->formatStatusData();
-                $this->createDataTable($this->statusData);
+                $table = $this->table->createDataTable($tableData);
+            }
+
+            return $table;
+        }
+
+        private function getRefereeAssessments() {
+            $assessments = array();
+
+            foreach($this->assessmentData as $row => $data) {
+                $refereeIds = array_keys($assessments);
+
+                if(in_array($data["referee_id"], $refereeIds)) {
+                    array_push($assessments[$data["referee_id"]], $data["Assessment 1"]);
+                }
+                else {
+                    $assessments[$data["referee_id"]] = array($data["Assessment 1"]);
+                }
+            }
+
+            return $assessments;
+        }
+
+        private function mergeStatusWithAssessments($refereeAssessments) {
+            foreach($this->statusData as $row => $data) {
+                array_push($this->statusTableData, $data); 
+                foreach($refereeAssessments as $refereeId => $assessments) {
+
+                    if($refereeId == $data["id"]) {
+                        $i = 1;
+                        foreach($assessments as $key => $value) {
+                            $this->statusTableData[$row]["Assessment " . $i] = $value;
+                            $i++;
+                        }
+                    }
+                }
             }
         }
 
-        private function createDataTable($result) 
-        {
-            $html = "";
-            $html .= "<table id=\"status_table\" class=\"display\" style=\"width:100%\">";
-            if($result === [])
-            {
-                $result = $this->getBlankTableData();
-                $html .= "<thead>" . $this->addColumns($result) . "</thead>";
-            }
-            else {
-                $html .= "<thead>" . $this->addColumns($result) . "</thead>";
-                $html .= "<tbody>" . $this->addRows($result) . "</tbody>";
-            } 
-            
-            $html .= "</table>";
-            
-            $this->statusTable = $html;
-        }
+        private function removeId($array) {
+            $newArray = array();
 
-        private function isValidConnToDB($conn) {
-            if(is_a($conn, 'mysqli')) {
-                return true;
+            foreach($array as $row => $data) {
+                foreach($data as $key => $value) {
+                    if($key !== "id") {
+                        $newArray[$row][$key] = $value;
+                    }
+                }
             }
-            return false;
-        }
 
-        private function isMysqliException($item) {
-            if(is_a($item, 'mysqli_sql_exception')) {
-                return true;
-            }
-            return false;
-        }
-
-        private function getStatusData() {
-            $query = "SELECT s.id, s.full_name as 'Name', s.grade as 'Grade', s.recert as 'Recert Clinic', ";
-            $query .= "s.written_test as 'Written Test', s.fitness as 'Fitness Test', ";
-            $query .= "s.game_log as 'Game Log', s.upgrade_clinic as 'Upgrade Clinic', ";
-            $query .= "a.referee_id, a.pass ";
-            $query .= "FROM Status AS s ";
-            $query .= "INNER JOIN Assessments AS a ON s.id = a.referee_id";
-            
-            $this->statusData = $this->db->exeQuery($query);
-        }
-
-        private function formatStatusData() {
-            foreach ($this->statusData as $column => $value) {
-                
-            }
+            return $newArray;
         }
 
         private function getBlankTableData()
@@ -122,32 +138,7 @@
             return $array;
         }
 
-        private function addColumns($result) 
-        {
-            $html = "";
-            foreach($result as $row) {
-                $html .= "<tr>";
-                foreach($row as $columnName => $value) {
-                    $html .= "<th>" . $columnName . "</th>";
-                }
-                $html .= "</tr>";
-                return $html;
-            }
-            return $html;
-        }
-        private function addRows($result) 
-        {
-            $html = "";
-            foreach($result as $row) {
-                $html .= "<tr>";
-                foreach($row as $columnName => $value) {
-                    $html .= "<td>" . $value . "</td>";
-                }
-                $html .= "</tr>";
-            }
-            
-            return $html;
-        }
+        
         
     }
 

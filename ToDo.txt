@@ -2,9 +2,9 @@
 TODO:
 
 status table
--put multiple assessments on the same line for a referee
 -make blank table and table with info have same columns
--table ui
+-ui
+-sorting icons for columns
 
 status table queries (ajax to actions for query buttons?)
 
