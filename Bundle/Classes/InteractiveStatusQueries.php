@@ -16,61 +16,64 @@
             ob_start(); ?>
 
 
-            <div>
-                <div class="linePadding">
-                    <div class="inline"> Add Referee </div>
-                    <i class = "material-icons inline inlinePositon">add_box</i>
-                </div>
-
-                <div class="linePadding">
-                    <div class="inline"> Name: </div>
-                    <input class="textInputBoxSize inline"> 
-                    <a class="btn inline"> Add Referee</a>
-                </div>
+            <div class="linePadding">
+                <div class="inline"> Add Referee </div>
+                <i id="addRefereeBtn" class = "material-icons inline inlinePositon">add_box</i>
             </div>
 
+            <div id="addRefereeHTML" class="linePadding">
+                <div class="inline "> Name: </div>
+                <input class="textInputBoxSize inline"> 
+                <a class="btn inline"> Add Referee</a>
+            </div>
 
-            <div>
+            <div id="selectRefereeHTML">
+
+            </div>
+
+            <div id="updateRefereeHTML">
                 <div class="linePadding">
                     <div class="inline"> Written Test: </div>
                     <input class="numberInputBoxSize inline"> 
 
                     <span class="inline"> Fitness Test: </span>
-                    <input type="checkbox" class="filled-in inline" checked="checked"/>
+                    <input type="checkbox" class="filled-in inline " checked="checked"/>
 
                     <span class="inline"> Game Log: </span>
                     <input type="checkbox" class="filled-in inline" checked="checked"/>
                 </div>
 
-
-            
                 <div class="linePadding">
                     <div class="inline"> Add Assessment </div>
-                    <i class = "material-icons inline inlinePositon">add_box</i>
+                    <i id="addAssessmentBtn" class = "material-icons inline inlinePositon">add_box</i>
+                </div>
+            </div>
+
+            <div id="addAssessmentHTML">
+                <div class="linePadding">
+                    <label>
+                        <input name="assessmentType" type="radio" />
+                        <span>Maintenance</span>
+                    </label>
+                    <br>
+                    <label>
+                        <input name="assessmentType" type="radio" />
+                        <span>Upgrade</span>
+                    </label>
                 </div>
 
                 <div class="linePadding">
                     <div class="inline"> Assessor: </div>
                     <input class="textInputBoxSize inline">
 
-                    <div class="inline"> Position: </div>
-                    <input class="textInputBoxSize inline">
+                    <div class="inline"> Score: </div>
+                    <input class="numberInputBoxSize inline">
                 </div>
 
                 <div class="linePadding">
-                    <ul id='type' class='dropdown-content'>
-                        <li><div>Maintenance</div></li>
-                        <li><div>Upgrade</div></li>
-                    </ul>
-
-                    <div class="inline"> Type: </div>
-                    <a class='dropdown-trigger btn'data-target='type'>
-                        <i class = "material-icons ">arrow_drop_down</i>
-                    </a>
+                    <div class="inline"> Position: </div>
+                    <input class="textInputBoxSize inline">
                     
-
-                    <div class="inline"> Score: </div>
-                    <input class="numberInputBoxSize inline">
 
                     <a class="btn inline"> Add Assessment</a>
                 </div>

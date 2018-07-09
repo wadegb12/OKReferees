@@ -143,7 +143,7 @@
                     <div><?php echo "Error: " . $this->error ?></div>
                     <div><?php echo "Mysql Error: " . $this->mysqlExcption ?></div>
                     <div class="linePadding">
-                        <div><?php echo $this->interactiveQueriesHTML ?></div>
+                        <?php echo $this->interactiveQueriesHTML ?>
                     </div>
                     <div><?php echo $this->statusTable ?></div>
                     
