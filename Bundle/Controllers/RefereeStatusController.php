@@ -1,12 +1,13 @@
 <?php
     class RefereeStatusController extends AbstractController {
-        private $error = "";
-        private $mysqlExcption = "";
-        private $statusData = array();
+        private $error;
+        private $mysqlExcption;
+        
+        private $interactiveQueriesHTML;
+        private $statusData;
         private $assessmentData;
-        private $statusTableData = array();
-        private $statusTable = "";
-        private $interactiveQueries = "";
+        private $statusTableData;
+        private $statusTable;
         private $blankTableColumns = array('Name', 'Grade', 'Recert Clinic', 'Written Test', 'Assessment', 
             'Fitness Test', 'Game Log', 'Upgrade Cinic');
 
@@ -15,6 +16,7 @@
             $this->queries = new Queries();
             $this->table = new Table();
             $this->exceptionHandler = new ExceptionHandler();
+            $this->interactiveStatusQueries = new InteractiveStatusQueries();
 
             if($this->exceptionHandler->isValidConnToDB($this->db->conn)) {
                 $this->statusData = $this->db->exeQuery($this->queries->getStatusesQuery());
@@ -32,14 +34,13 @@
                 
                 $this->statusTable = $this->createStatusTable($this->statusTableData);
 
-                
-                // $this->createQueries();
+                $this->interactiveQueriesHTML = $this->interactiveStatusQueries->getInteractiveQueryHTML();
             }
             else {
                 $this->error = "Could not connect to Database";
             }
 
-            $this->buildView();
+            $this->view = $this->buildView();
             $this->renderHTML($this->view);
         }
 
@@ -133,25 +134,24 @@
             return $columns;
         }
 
-        // private function createQueries() {
-            
-        // }
-
         private function buildView() {
             ob_start(); 
             include(dirname(__FILE__). '/../Views/default.php') ?>
             
             <div class="hide-on-med-and-down container grayBackground">
-                <div class="linePadding">
+                <div class="borderPadding">
                     <div><?php echo "Error: " . $this->error ?></div>
                     <div><?php echo "Mysql Error: " . $this->mysqlExcption ?></div>
-                    <div><?php echo $this->interactiveQueries ?></div>
+                    <div class="linePadding">
+                        <div><?php echo $this->interactiveQueriesHTML ?></div>
+                    </div>
                     <div><?php echo $this->statusTable ?></div>
+                    
                 </div>
             </div>
             
 
-            <?php $this->view = ob_get_clean(); 
+            <?php return ob_get_clean(); 
         }
         
     }

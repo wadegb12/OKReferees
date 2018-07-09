@@ -5,6 +5,7 @@ status table
 -make blank table and table with info have same columns
 -ui
 -sorting icons for columns
+-only works for up to three assessments (needs to be able to wrap)
 
 status table queries (ajax to actions for query buttons?)
 

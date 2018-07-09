@@ -8,6 +8,28 @@
   height:160px;
 }
 
+.borderPadding {
+  padding:20px;
+}
+
 .linePadding {
-  padding:10px;
+  padding-top:10px;
+  padding-bottom:10px;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.inlinePositon {
+  position: relative;
+  bottom: -5px;
+}
+
+input.textInputBoxSize {
+  width: 200px;
+}
+
+input.numberInputBoxSize {
+  width: 50px;
 }

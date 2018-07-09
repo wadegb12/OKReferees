@@ -7,6 +7,7 @@
     require_once('./Bundle/Classes/Table.php');
     require_once('./Bundle/Classes/Login.php');
     require_once('./Bundle/Classes/ExceptionHandler.php');
+    require_once('./Bundle/Classes/InteractiveStatusQueries.php');
 
     require_once('./Setup/Globals.php');
     require_once('./Setup/Routes.php');
