@@ -2,7 +2,6 @@
 TODO:
 
 status table
--make blank table and table with info have same columns
 -ui
 -sorting icons for columns
 -only works for up to three assessments (needs to be able to wrap)
@@ -20,5 +19,3 @@ audit database
 
 
 BUGS: 
-
-src photos broken

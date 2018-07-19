@@ -33,6 +33,8 @@
         <script type="text/javascript" src="../Includes/JS/default.js"></script>
         <script type="text/javascript" src="../Includes/JS/datatables.min.js"></script>
         <script type="text/javascript" src="../Includes/JS/StatusTable.js"></script>
+        <script type="text/javascript" src="../Includes/JS/StatusQueries.js"></script>
+        
         
       <div>
     </footer>

@@ -28,7 +28,6 @@
             </div>
 
             <div id="selectRefereeHTML">
-
             </div>
 
             <div id="updateRefereeHTML">
