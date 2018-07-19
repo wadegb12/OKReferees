@@ -27,13 +27,13 @@
                 <a class="btn inline"> Add Referee</a>
             </div>
 
-            <div id="selectRefereeHTML">
+            <div id="lookUpReferee">
                 <div class="linePadding">
                     <div class="inline"> Search: </div>
                     <input class="textInputBoxSize inline">
                     
 
-                    <a class="btn inline"> Look Up</a>
+                    <a id="lookUpRefereeBtn" class="btn inline"> Look Up</a>
                 </div>
             </div>
 
