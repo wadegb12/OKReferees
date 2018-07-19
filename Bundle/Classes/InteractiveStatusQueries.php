@@ -28,6 +28,13 @@
             </div>
 
             <div id="selectRefereeHTML">
+                <div class="linePadding">
+                    <div class="inline"> Search: </div>
+                    <input class="textInputBoxSize inline">
+                    
+
+                    <a class="btn inline"> Look Up</a>
+                </div>
             </div>
 
             <div id="updateRefereeHTML">
