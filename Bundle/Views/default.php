@@ -18,6 +18,25 @@
             include(dirname(__FILE__). '/navBar.php');
         ?>
         
+        <div id='modal'>
+          <div class='modal-content'> 
+            <span class="close">&times;</span>
+            
+            <h2 class='center'>Admin Login</h2>
+            <div class='center'> 
+              <label>UserName :</label>
+              <input id="name" name="username" type="text">
+            </div>
+            <div class='center'>
+              <label>Password :</label>
+              <input id="password" name="password" type="password">
+            </div>
+            <div class='center'>
+              <button id='login' class = 'loginButton' name="submit"> Login</button>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <div class="hide-on-large-only">
