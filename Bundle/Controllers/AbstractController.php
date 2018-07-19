@@ -2,7 +2,7 @@
     class AbstractController 
     // extends Database
     {
-
+        
         // public $SERVER_NAME = "localhost:3306";
         // public $DB_NAME = "local_referee_tracking";
         // public $USERNAME = "root";

@@ -9,7 +9,6 @@
         new Route('/links', 'LinksController', 'index'),
         new Route('/srcContacts' ,'SRCContactsController', 'index'),
         new Route('/refereeStatus' ,'RefereeStatusController', 'index'),
-        // new Route('/login' ,'LoginController', 'index')
     );
 
     $routes = $routesList;
