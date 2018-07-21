@@ -12,7 +12,7 @@
     </ul>
      <ul id="navBar">
         <li><a href="Home.php"><div class="navBarText"> Home </div></a></li>
-        <li><a href="ComingSoon.php"><div class="navBarText"> Policies </div></a></li>
+        <li><a href="Policies.php"><div class="navBarText"> Policies </div></a></li>
         <li><a href="ComingSoon.php"><div class="navBarText"> Calander </div></a></li>
         <li>
           <a class="dropdown-button" data-beloworigin="true" data-activates="rulesDropdown" data-hover="true">
