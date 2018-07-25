@@ -34,13 +34,21 @@ input.numberInputBoxSize {
   width: 50px;
 }
 
-
-[type="radio"]:not(:checked), [type="radio"]:checked {
-  position:relative;
-  opacity: 100;
+span.radioButtonText {
+  font-size: 15px;
+  color: black;
+  margin-left: 5px;
+  position: relative;
+  bottom: 1px;
 }
 
-[type="radio"]:not(:checked), [type="radio"]:unchecked {
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+  position:relative;
+  opacity: 100;
+  pointer-events: auto;
+}
+
+[type="radio"]:not(:checked), [type="radio"]:checked {
   position:relative;
   opacity: 100;
 }
@@ -90,4 +98,13 @@ input.numberInputBoxSize {
 
 .loginButton {
   width: 100px;
+}
+
+.refereeModalText {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.bold {
+  font-weight: bold;
 }

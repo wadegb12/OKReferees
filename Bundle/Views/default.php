@@ -18,7 +18,7 @@
             include(dirname(__FILE__). '/navBar.php');
         ?>
         
-        <div id='modal'>
+        <div id='loginModal' class='modal'>
           <div class='modal-content'> 
             <span class="close">&times;</span>
             

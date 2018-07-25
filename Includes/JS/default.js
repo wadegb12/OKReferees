@@ -1,7 +1,7 @@
 $( document ).ready(function() {
 
     $(".loginLink").click(function() {
-        $("#modal").addClass("active");
+        $("#loginModal").addClass("active");
     });
 
     $(".logoutLink").click(function() {
@@ -9,7 +9,9 @@ $( document ).ready(function() {
     });
 
     $(".close").click(function() {
-        $("#modal").removeClass("active");
+        $("#loginModal").removeClass("active");
+        $("#addRefereeModal").removeClass("active");
+        $("#editRefereeModal").removeClass("active");
     });
 
 });

@@ -15,76 +15,89 @@
         public function createInteractiveQueryHTML() {
             ob_start(); ?>
 
-
             <div class="linePadding">
                 <div class="inline"> Add Referee </div>
                 <i id="addRefereeBtn" class = "material-icons inline inlinePositon">add_box</i>
             </div>
 
-            <div id="addRefereeHTML" class="linePadding">
-                <div class="inline "> Name: </div>
-                <input class="textInputBoxSize inline"> 
-                <a class="btn inline"> Add Referee</a>
+            <div id='addRefereeModal' class='modal'>
+                <div class='modal-content'> 
+                    <span class="close">&times;</span>
+                    <div class="linePadding">
+                        <div class="refereeModalText"> Add Referee </div>
+                        <div class="inline "> Name: </div>
+                        <input class="textInputBoxSize inline" name="refereeName"> 
+                        <div class="inline "> Grade: </div>
+                        <input class="numberInputBoxSize inline" name="refereeGrade"> 
+                        <div class="center">
+                            <a id="submitReferee" class="btn"> Add Referee</a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div id="lookUpReferee">
                 <div class="linePadding">
                     <div class="inline"> Search: </div>
-                    <input class="textInputBoxSize inline">
+                    <input class="textInputBoxSize inline" name="searchRefereeName">
                     
-
                     <a id="lookUpRefereeBtn" class="btn inline"> Look Up</a>
                 </div>
             </div>
+            
+            <div id='editRefereeModal' class='modal'>
+                <div class='modal-content'> 
+                    <span class="close">&times;</span>
+                    <div id="updateRefereeHTML">
+                        <div class="refereeModalText linePadding"> Edit Referee </div>
+                        <div name="refereeDisplayed" class="bold">  </div>
+                        <div class="linePadding">
+                            <div class="inline"> Written Test: </div>
+                            <input class="numberInputBoxSize inline" name="writtenTestScore"> 
 
-            <div id="updateRefereeHTML">
-                <div class="linePadding">
-                    <div class="inline"> Written Test: </div>
-                    <input class="numberInputBoxSize inline"> 
+                            <span class="inline"> Fitness Test: </span>
+                            <input name="fitnessTest" type="checkbox" class="filled-in inline "/>
 
-                    <span class="inline"> Fitness Test: </span>
-                    <input type="checkbox" class="filled-in inline " checked="checked"/>
+                            <span class="inline"> Game Log: </span>
+                            <input name="gameLog" type="checkbox" class="filled-in inline"/>
 
-                    <span class="inline"> Game Log: </span>
-                    <input type="checkbox" class="filled-in inline" checked="checked"/>
-                </div>
+                            <a id="updateRefereeBtn" class="btn inline"> Update Referee</a>
+                        </div>
 
-                <div class="linePadding">
-                    <div class="inline"> Add Assessment </div>
-                    <i id="addAssessmentBtn" class = "material-icons inline inlinePositon">add_box</i>
+                        <div class="linePadding">
+                            <div class="inline"> Add Assessment </div>
+                            <i id="addAssessmentBtn" class = "material-icons inline inlinePositon">add_box</i>
+                        </div>
+                    </div>
+                
+                    <div id="addAssessmentHTML">
+                        <div class="linePadding">
+                            <label>
+                                <input value="0" name="assessmentType" type="radio" />
+                                <span class="radioButtonText">Maintenance</span>
+                            </label>
+                            <br>
+                            <label>
+                                <input value="1" name="assessmentType" type="radio" />
+                                <span class="radioButtonText">Upgrade</span>
+                            </label>
+                        </div>
+
+                        <div class="linePadding">
+                            <div class="inline"> Score: </div>
+                            <input class="numberInputBoxSize inline" name="assessmentScore">
+                            
+                            <div class="inline"> Assessor: </div>
+                            <input class="textInputBoxSize inline" name="assessor">
+
+                            <div class="inline"> Position: </div>
+                            <input class="textInputBoxSize inline" name="assessmentPosition">
+                            
+                            <a id="submitAssessmentBtn" class="btn inline"> Add Assessment</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <div id="addAssessmentHTML">
-                <div class="linePadding">
-                    <label>
-                        <input name="assessmentType" type="radio" />
-                        <span>Maintenance</span>
-                    </label>
-                    <br>
-                    <label>
-                        <input name="assessmentType" type="radio" />
-                        <span>Upgrade</span>
-                    </label>
-                </div>
-
-                <div class="linePadding">
-                    <div class="inline"> Assessor: </div>
-                    <input class="textInputBoxSize inline">
-
-                    <div class="inline"> Score: </div>
-                    <input class="numberInputBoxSize inline">
-                </div>
-
-                <div class="linePadding">
-                    <div class="inline"> Position: </div>
-                    <input class="textInputBoxSize inline">
-                    
-
-                    <a class="btn inline"> Add Assessment</a>
-                </div>
-            </div>
-
 
             <?php return ob_get_clean(); 
         }
