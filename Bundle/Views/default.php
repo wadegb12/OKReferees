@@ -23,16 +23,21 @@
             <span class="close">&times;</span>
             
             <h2 class='center'>Admin Login</h2>
+            
             <div class='center'> 
-              <label>UserName :</label>
-              <input id="name" name="username" type="text">
+              <div class="inline "> UserName: </div>
+              <div class="inline textInputBoxSize">  
+                <input id="name" name="username" class="inline">
+              </div>
             </div>
             <div class='center'>
-              <label>Password :</label>
-              <input id="password" name="password" type="password">
+              <div class="inline "> Password: </div>
+              <div class="inline textInputBoxSize">  
+                <input id="password" name="password" class="inline" type="password" >
+              </div>
             </div>
             <div class='center'>
-              <button id='login' class = 'loginButton' name="submit"> Login</button>
+              <button id='login' class = 'loginButton btn' name="submit"> Login</button>
             </div>
           </div>
         </div>

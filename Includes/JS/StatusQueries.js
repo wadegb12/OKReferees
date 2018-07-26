@@ -11,6 +11,14 @@ $(document).ready( function () {
         $('#addAssessmentHTML').toggle();
     });
 
+    $('#lookUpRefereeBtn').click(function() {
+        $("#editRefereeModal").addClass("active");
+        $('#addAssessmentHTML').hide();
+        
+        var refereeName = $('[name="searchRefereeName"]').val();
+        $('[name="refereeDisplayed"]').text(refereeName);
+    });
+
     $('#submitReferee').click(function() {
         $('[name="refereeDisplayed"]').text("");
         $('#editRefereeHMTL').hide();
@@ -22,14 +30,6 @@ $(document).ready( function () {
         console.log("Grade: " + refereeGrade);
 
         $("#addRefereeModal").removeClass("active");
-    });
-
-    $('#lookUpRefereeBtn').click(function() {
-        $("#editRefereeModal").addClass("active");
-        $('#addAssessmentHTML').hide();
-        
-        var refereeName = $('[name="searchRefereeName"]').val();
-        $('[name="refereeDisplayed"]').text(refereeName);
     });
 
     $('#updateRefereeBtn').click(function() {

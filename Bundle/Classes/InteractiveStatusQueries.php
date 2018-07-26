@@ -51,16 +51,22 @@
                     <div id="updateRefereeHTML">
                         <div class="refereeModalText linePadding"> Edit Referee </div>
                         <div name="refereeDisplayed" class="bold">  </div>
+
                         <div class="linePadding">
+                            <div class="inline "> Grade: </div>
+                            <input class="numberInputBoxSize inline" name="updateRefereeGrade"> 
                             <div class="inline"> Written Test: </div>
                             <input class="numberInputBoxSize inline" name="writtenTestScore"> 
+                        </div>
 
+                        <div class="linePadding">
                             <span class="inline"> Fitness Test: </span>
                             <input name="fitnessTest" type="checkbox" class="filled-in inline "/>
-
                             <span class="inline"> Game Log: </span>
                             <input name="gameLog" type="checkbox" class="filled-in inline"/>
+                        </div>
 
+                        <div class="linePadding">
                             <a id="updateRefereeBtn" class="btn inline"> Update Referee</a>
                         </div>
 
