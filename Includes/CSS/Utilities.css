@@ -26,11 +26,11 @@
   bottom: -5px;
 }
 
-textInputBoxSize{
+input.textInputBoxSize, textInputBoxSize{
   width: 200px;
 }
 
-numberInputBoxSize {
+input.numberInputBoxSize, numberInputBoxSize {
   width: 50px;
 }
 

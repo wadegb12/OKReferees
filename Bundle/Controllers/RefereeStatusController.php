@@ -11,20 +11,23 @@
         private $blankTableColumns = array('Name', 'Grade', 'Recert Clinic', 'Written Test', 'Assessment', 
             'Fitness Test', 'Game Log', 'Upgrade Cinic');
 
-        public function index() {
+        public function __construct()
+        {
             $this->db = new Database();
             $this->queries = new Queries();
             $this->table = new Table();
             $this->exceptionHandler = new ExceptionHandler();
             $this->interactiveStatusQueries = new InteractiveStatusQueries();
-
+        }
+        public function index() {
+            
             if($this->exceptionHandler->isValidConnToDB($this->db->conn)) {
-                $this->statusData = $this->db->exeQuery($this->queries->getStatusesQuery());
-                $this->assessmentData = $this->db->exeQuery($this->queries->getAssessmentsQuery());
+                $this->statusData = $this->db->exeQuery($this->queries->getStatuses());
+                $this->assessmentData = $this->db->exeQuery($this->queries->getAssessments());
 
                 $refereeAssessments = $this->getRefereeAssessments();
                 
-                if (!is_null($this->statusData)) {
+                if (!is_null($this->statusData) && !$this->exceptionHandler->isMysqliException($this->statusData)) {
                     if(count($refereeAssessments) > 0) {
                         $this->statusData = $this->mergeStatusWithAssessments($this->statusData, $refereeAssessments);
                     }
@@ -43,6 +46,17 @@
             $this->view = $this->buildView();
             $this->renderHTML($this->view);
         }
+
+        public function addRefereeAction()
+        {
+            $refereeName = $_POST['refereeName'];
+            $grade = $_POST['refereeGrade'];
+            
+            $this->queries->addReferee($refereeName, $grade);
+        }
+
+
+
 
         private function getRefereeAssessments() {
             $assessments = array();
@@ -66,19 +80,23 @@
         private function mergeStatusWithAssessments($statusData, $refereeAssessments) {
             $mergedArray = array();
 
-            foreach($statusData as $row => $data) {
-                array_push($mergedArray, $data); 
-                foreach($refereeAssessments as $refereeId => $assessments) {
-
-                    if($refereeId == $data["id"]) {
-                        $i = 1;
-                        foreach($assessments as $key => $value) {
-                            $mergedArray[$row]["Assessment " . $i] = $value;
-                            $i++;
+            if(!is_null($statusData))
+            {
+                foreach($statusData as $row => $data) {
+                    array_push($mergedArray, $data); 
+                    foreach($refereeAssessments as $refereeId => $assessments) {
+    
+                        if($refereeId == $data["id"]) {
+                            $i = 1;
+                            foreach($assessments as $key => $value) {
+                                $mergedArray[$row]["Assessment " . $i] = $value;
+                                $i++;
+                            }
                         }
                     }
                 }
             }
+            
 
             return $mergedArray;
         }
@@ -106,8 +124,12 @@
             }
             else if($this->exceptionHandler->isMysqliException($this->statusData)) {
                 $this->mysqlExcption = $this->statusData;
-                $this->table->setColumnConfig($this->getBlankTableData());
-                $table = $this->table->createDataTable([]);
+                
+                if($this->doesTableExist())
+                {
+                    $this->table->setColumnConfig($this->getBlankTableData());
+                    $table = $this->table->createDataTable([]);
+                }
             }
             else {
                 $this->table->setColumnConfig($this->getColumns($tableData));
@@ -115,6 +137,11 @@
             }
 
             return $table;
+        }
+
+        private function doesTableExist() {
+            $message = $this->mysqlExcption->getMessage();
+            return strpos($message, "Table") && strpos($message, "doesn't exist");
         }
 
         private function getColumns($tableData) {
