@@ -113,7 +113,7 @@
             <li>Must be Grade 8 for one (1) Year</li>
             <li>Must be 18 years old before January 1 of next year.</li>
             <li>Declare to upgrade before Nov 1st</li>
-            <li>Game count (75 referee 25 AR)- Sanctioned USSF games using Diagnal System of Control</li>
+            <li>Game count (75 referee 25 AR)- Sanctioned USSF games using Diagonal System of Control</li>
             <li>Have everything completed and turned in before Dec. 1 to the upgrade panel.</li>
             <li>Pay Grade 7 Upgrade Clinic fee</li>
             <li>Attend upgrade clinic in January.&nbsp;</li>
