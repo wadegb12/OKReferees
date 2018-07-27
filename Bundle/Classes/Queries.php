@@ -16,12 +16,14 @@
     
         public function addReferee($refereeName, $grade)
         {
-            $date = date(Y);
+            $date = date('Y');
 
             $statusesQuery = "INSERT INTO Status ";
             $statusesQuery .= "(cert_year, full_name, grade, written_test, written_test_score, fitness, ";
             $statusesQuery .= "fitness_date, fitness_city, game_log, recert, upgrade_clinic) ";
-            $statusesQuery .= "VALUES (" . $date . ", " . $refereeName . ", " . $grade . ", "; 
-            $statusesQuery .= "0, 0, 0, , , 0,0,0)"; 
+            $statusesQuery .= "VALUES ('$date', '$refereeName', '$grade', "; 
+            $statusesQuery .= "0, 0, 0, 0000-00-00, 'a' , 0, 0, 0)"; 
+
+            return $statusesQuery;
         }
     }

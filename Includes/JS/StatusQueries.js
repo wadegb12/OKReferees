@@ -17,6 +17,7 @@ $(document).ready( function () {
         
         var refereeName = $('[name="searchRefereeName"]').val();
         $('[name="refereeDisplayed"]').text(refereeName);
+
     });
 
     $('#submitReferee').click(function() {
@@ -26,10 +27,22 @@ $(document).ready( function () {
         var refereeName = $('[name="refereeName"]').val();
         var refereeGrade = $('[name="refereeGrade"]').val();
 
-        console.log("Name: " + refereeName);
-        console.log("Grade: " + refereeGrade);
+        // console.log("Name: " + refereeName);
+        // console.log("Grade: " + refereeGrade);
 
-        $("#addRefereeModal").removeClass("active");
+        $.ajax({
+            url: "addReferee",
+            type: "POST",
+            dataType: 'JSON',
+            data: {refereeName : refereeName, refereeGrade : refereeGrade},
+            success: function(result) {
+                if(result.status) {
+                    //reload table
+                }
+            }
+          });
+          
+          
     });
 
     $('#updateRefereeBtn').click(function() {
@@ -38,10 +51,10 @@ $(document).ready( function () {
         var fitnessTest = $('[name="fitnessTest"]');
         var gameLog = $('[name="gameLog"]');
 
-        console.log("Name: " + refereeName);
-        console.log("writtenTestScore: " + writtenTestScore);
-        console.log("fitnessTest: " + fitnessTest.is(":checked"));
-        console.log("gameLog: " + gameLog.is(":checked"));
+        // console.log("Name: " + refereeName);
+        // console.log("writtenTestScore: " + writtenTestScore);
+        // console.log("fitnessTest: " + fitnessTest.is(":checked"));
+        // console.log("gameLog: " + gameLog.is(":checked"));
     });
 
     $('#submitAssessmentBtn').click(function() {
@@ -51,11 +64,11 @@ $(document).ready( function () {
         var assessmentScore = $('[name="assessmentScore"]').val();
         var assessmentPosition = $('[name="assessmentPosition"]').val();
 
-        console.log("Name: " + refereeName);
-        console.log("type: " + type);
-        console.log("assessor: " + assessor);
-        console.log("assessmentScore: " + assessmentScore);
-        console.log("assessmentPosition: " + assessmentPosition);
+        // console.log("Name: " + refereeName);
+        // console.log("type: " + type);
+        // console.log("assessor: " + assessor);
+        // console.log("assessmentScore: " + assessmentScore);
+        // console.log("assessmentPosition: " + assessmentPosition);
     });
     
 } );

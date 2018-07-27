@@ -52,7 +52,10 @@
             $refereeName = $_POST['refereeName'];
             $grade = $_POST['refereeGrade'];
             
-            $this->queries->addReferee($refereeName, $grade);
+            $addRefereeQuery = $this->queries->addReferee($refereeName, $grade);
+            $status = $this->db->exeQuery($addRefereeQuery);
+
+            echo json_encode(['status' => $status]);
         }
 
 
@@ -127,7 +130,7 @@
                 
                 if($this->doesTableExist())
                 {
-                    $this->table->setColumnConfig($this->getBlankTableData());
+                    $this->table->setColumnConfig($this->blankTableColumns);
                     $table = $this->table->createDataTable([]);
                 }
             }

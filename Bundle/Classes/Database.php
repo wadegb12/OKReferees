@@ -34,7 +34,10 @@
                 try {
                     $result = $this->conn->query($query);
 
-                    if ($result->num_rows === 0) {
+                    if($result === true) {
+                        return $result;
+                    }
+                    else if ($result->num_rows === 0) {
                         return null;
                     }
               
