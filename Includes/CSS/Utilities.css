@@ -111,3 +111,8 @@ span.radioButtonText {
 .bold {
   font-weight: bold;
 }
+
+.statusTableTitle {
+  font-size: 32px;
+  font-weight: bold;
+}

@@ -175,6 +175,7 @@
                     <div class="linePadding">
                         <?php echo $this->interactiveQueriesHTML ?>
                     </div>
+                    <div class="statusTableTitle"> Status Table</div>
                     <div><?php echo $this->statusTable ?></div>
                     
                 </div>
