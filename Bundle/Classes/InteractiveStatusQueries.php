@@ -13,12 +13,29 @@
         }
 
         public function createInteractiveQueryHTML() {
+            $html =  $this->getAddRefereeBtn();
+            $html .= $this->getAddRefereeModalHTML();
+            $html .= $this->getLookUpRefereeBtnHTML();
+            $html .= $this->getEditRefereeModalHTML();
+
+            return $html; 
+        }
+
+        private function getAddRefereeBtn()
+        {
             ob_start(); ?>
 
             <div class="linePadding">
                 <div class="inline"> Add Referee </div>
                 <i id="addRefereeBtn" class = "material-icons inline inlinePositon">add_box</i>
             </div>
+
+            <?php return ob_get_clean(); 
+        }
+
+        private function getAddRefereeModalHTML()
+        {
+            ob_start(); ?>
 
             <div id='addRefereeModal' class='modal'>
                 <div class='modal-content'> 
@@ -39,6 +56,13 @@
                 </div>
             </div>
 
+            <?php return ob_get_clean(); 
+        }
+
+        private function getLookUpRefereeBtnHTML()
+        {
+            ob_start(); ?>
+
             <div id="lookUpReferee">
                 <div class="linePadding">
                     <div class="inline"> Search: </div>
@@ -47,7 +71,14 @@
                     <a id="lookUpRefereeBtn" class="btn inline"> Look Up</a>
                 </div>
             </div>
-            
+
+            <?php return ob_get_clean(); 
+        }
+
+        private function getEditRefereeModalHTML()
+        {
+            ob_start(); ?>
+
             <div id='editRefereeModal' class='modal'>
                 <div class='modal-content'> 
                     <span class="close">&times;</span>
@@ -110,4 +141,6 @@
 
             <?php return ob_get_clean(); 
         }
+
+       
     }
