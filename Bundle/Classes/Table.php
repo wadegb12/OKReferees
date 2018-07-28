@@ -19,7 +19,7 @@
             $html = "";
             $html .= "<tr>";
             foreach($this->columnConfig as $column) {
-                $html .= "<th>" . $column . "</th>";
+                $html .= "<th><div class='center'>" . $column . "</div></th>";
             }
             $html .= "</tr>";
             return $html;
@@ -35,12 +35,23 @@
 
                 foreach($this->columnConfig as $column) {
                     if(in_array($column, $rowKeys)) {
-                        $value = $row[$column];
+                        if($row[$column] === "0")
+                        {
+                            $value = "-";
+                        }
+                        else if ($row[$column] === "1")
+                        {
+                            $value = '<input class="tableCheckbox" type="checkbox" checked="checked"/>';
+                        }
+                        else {
+                            $value = $row[$column];
+                            
+                        }
                     }
                     else {
                         $value = "-";
                     }
-                    $html .= "<td>" . $value . "</td>";
+                    $html .= "<td><div class='center'>" . $value . "</div></td>";
                 }
                 
                 $html .= "</tr>";

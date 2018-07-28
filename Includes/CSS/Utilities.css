@@ -47,6 +47,9 @@ span.radioButtonText {
   opacity: 100;
   pointer-events: auto;
 }
+[type="checkbox"]:not(:checked).tableCheckbox, [type="checkbox"]:checked.tableCheckbox {
+  pointer-events: none;
+}
 
 [type="radio"]:not(:checked), [type="radio"]:checked {
   position:relative;

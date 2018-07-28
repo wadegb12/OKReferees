@@ -3,6 +3,8 @@ $(document).ready( function () {
     $('#addRefereeHTML').hide();
     $('#editRefereeHMTL').hide();
 
+    // $('#status_table_length').hide();
+
     $('#addRefereeBtn').click(function() {
         $("#addRefereeModal").addClass("active");
     });
@@ -40,11 +42,8 @@ $(document).ready( function () {
                     if(result.status) {
                         $('.addRefereeErrorMsg').text('');
                         $("#addRefereeModal").removeClass("active");
-                        var table = $('#status_table').dataTable().api(); 
-                        // {
-                        //     ajax: "data.json"
-                        // });
-                        table.ajax.reload();
+                        // var table = $('#status_table').dataTable(); 
+                        // table.ajax.api().reload();
                     }
                     else {
                         $('.addRefereeErrorMsg').text('Error adding referee');
