@@ -22,7 +22,6 @@ $(document).ready( function () {
 
     $('#submitReferee').click(function() {
         $('[name="refereeDisplayed"]').text("");
-        $('#editRefereeHMTL').hide();
 
         var refereeName = $('[name="refereeName"]').val();
         var refereeGrade = $('[name="refereeGrade"]').val();
@@ -30,17 +29,34 @@ $(document).ready( function () {
         // console.log("Name: " + refereeName);
         // console.log("Grade: " + refereeGrade);
 
-        $.ajax({
-            url: "addReferee",
-            type: "POST",
-            dataType: 'JSON',
-            data: {refereeName : refereeName, refereeGrade : refereeGrade},
-            success: function(result) {
-                if(result.status) {
-                    //reload table
+        if(refereeGrade.length <= 2 && refereeName.length > 1)
+        {
+            $.ajax({
+                url: "addReferee",
+                type: "POST",
+                dataType: 'JSON',
+                data: {refereeName : refereeName, refereeGrade : refereeGrade},
+                success: function(result) {
+                    if(result.status) {
+                        $('.addRefereeErrorMsg').text('');
+                        $("#addRefereeModal").removeClass("active");
+                        var table = $('#status_table').dataTable().api(); 
+                        // {
+                        //     ajax: "data.json"
+                        // });
+                        table.ajax.reload();
+                    }
+                    else {
+                        $('.addRefereeErrorMsg').text('Error adding referee');
+                        $('.addRefereeErrorMsg').css('color', 'red');
+                    }
                 }
-            }
-          });
+              });
+        }
+        else {
+            $('.addRefereeErrorMsg').text('Please enter a valid referee and grade');
+            $('.addRefereeErrorMsg').css('color', 'red');
+        }
           
           
     });

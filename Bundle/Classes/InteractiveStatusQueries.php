@@ -26,9 +26,12 @@
                     <div class="linePadding">
                         <div class="refereeModalText"> Add Referee </div>
                         <div class="inline "> Name: </div>
-                        <input class="textInputBoxSize inline" name="refereeName"> 
+                        <div class="textInputBoxSize inline"> 
+                            <input name="refereeName" type="text"> 
+                        </div>
                         <div class="inline "> Grade: </div>
                         <input class="numberInputBoxSize inline" name="refereeGrade"> 
+                        <div class="linePadding addRefereeErrorMsg"> </div>
                         <div class="center">
                             <a id="submitReferee" class="btn"> Add Referee</a>
                         </div>
