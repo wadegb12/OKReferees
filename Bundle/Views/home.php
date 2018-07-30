@@ -2,8 +2,8 @@
   include(dirname(__FILE__). '/default.php');
 ?>
 
-<div class="hide-on-med-and-down container grayBackground">
-  <div class="container grayBackground">
+<div class="hide-on-med-and-down container">
+  <div class="container grayBackground containerPadding grayBackground">
     <div class="linePadding">
       <p3>Upcoming Events</p3>
       <p>&nbsp;</p>
@@ -22,7 +22,7 @@
       <p><strong><u>NOVEMBER</u></strong></p>
       <p>November 9<sup>th</sup> &ndash; 11<sup>th</sup> &ndash; OPL Festival Play TBD</p>
       <p>&nbsp;</p>
-      <p><em>A list of tournaments can be found <a href="http://www.oksoccer.com/tournaments/tournaments/"here</a>.</em></p>
+      <p><em>A list of tournaments can be found <a href="http://www.oksoccer.com/tournaments/tournaments/">here</a>.</em></p>
     </div>
   </div>
 </div>
