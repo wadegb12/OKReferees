@@ -9,6 +9,9 @@
         new Route('/links', 'LinksController', 'index'),
         new Route('/srcContacts' ,'SRCContactsController', 'index'),
         new Route('/refereeStatus' ,'RefereeStatusController', 'index'),
+        new Route('/policies' ,'PoliciesController', 'index'),
+
+
         new Route('/addReferee' ,'RefereeStatusController', 'addRefereeAction'),
     );
 
