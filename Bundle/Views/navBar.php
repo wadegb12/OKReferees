@@ -1,4 +1,4 @@
-<nav class="#000080 nav-center z-depth-1">
+<nav class="nav-center z-depth-1">
   <div class="container">
 
     <ul id="rulesDropdown" class="dropdown-content">
