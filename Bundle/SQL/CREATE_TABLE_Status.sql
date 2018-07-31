@@ -14,20 +14,12 @@ CREATE TABLE Status (
     PRIMARY KEY (id)
 );
 
-SELECT * FROM Status;
 
 INSERT INTO Status (cert_year, full_name, grade, written_test, written_test_score, fitness, 
 	fitness_date, fitness_city, game_log, recert, upgrade_clinic) VALUES (2018, "Wade", 
     6, 1, 90, 1, "2018-06-01", "Stillwater", 0, 1, 0);
-    
-INSERT INTO Status (cert_year, full_name, grade, written_test, written_test_score, fitness, 
-	fitness_date, fitness_city, game_log, recert, upgrade_clinic) VALUES (2018, "Mark", 
-    6, 1, 90, 1, "2018-06-01", "Stillwater", 0, 1, 0);
-    
-DROP TABLE Status;
 
-
-
+  
 
 
 
