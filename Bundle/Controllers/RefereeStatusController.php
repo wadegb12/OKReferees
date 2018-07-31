@@ -37,7 +37,7 @@
                 
                 $this->statusTable = $this->createStatusTable($this->statusTableData);
 
-                $this->interactiveQueriesHTML = $this->interactiveStatusQueries->getInteractiveQueryHTML();
+                // $this->interactiveQueriesHTML = $this->interactiveStatusQueries->getInteractiveQueryHTML();
             }
             else {
                 $this->error = "Could not connect to Database";
@@ -170,11 +170,13 @@
             
             <div class="hide-on-med-and-down container grayBackground">
                 <div class="borderPadding">
-                    <div><?php echo "Error: " . $this->error ?></div>
-                    <div><?php echo "Mysql Error: " . $this->mysqlExcption ?></div>
+                    <!--
+                    <div><?php //echo "Error: " . $this->error ?></div>
+                    <div><?php //echo "Mysql Error: " . $this->mysqlExcption ?></div>
                     <div class="linePadding">
-                        <?php echo $this->interactiveQueriesHTML ?>
+                        <?php //echo $this->interactiveQueriesHTML ?>
                     </div>
+                    -->
                     <div class="statusTableTitle"> Status Table</div>
                     <div><?php echo $this->statusTable ?></div>
                     

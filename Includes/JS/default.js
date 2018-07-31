@@ -4,9 +4,9 @@ $( document ).ready(function() {
         $("#loginModal").addClass("active");
     });
 
-    $(".logoutLink").click(function() {
-        window.location.replace('/../index.php');
-    });
+    // $(".logoutLink").click(function() {
+    //     window.location.replace('/../index.php');
+    // });
 
     $(".close").click(function() {
         $("#loginModal").removeClass("active");
