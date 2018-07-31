@@ -1,0 +1,118 @@
+
+.srcTitle {
+  font-weight: bold;
+}
+
+.srcPhoto {
+  width:120px;
+  height:160px;
+}
+
+.borderPadding {
+  padding:20px;
+}
+
+.linePadding {
+  padding-top:10px;
+  padding-bottom:10px;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.inlinePositon {
+  position: relative;
+  bottom: -5px;
+}
+
+input.textInputBoxSize, textInputBoxSize{
+  width: 200px;
+}
+
+input.numberInputBoxSize, numberInputBoxSize {
+  width: 50px;
+}
+
+span.radioButtonText {
+  font-size: 15px;
+  color: black;
+  margin-left: 5px;
+  position: relative;
+  bottom: 1px;
+}
+
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+  position:relative;
+  opacity: 100;
+  pointer-events: auto;
+}
+[type="checkbox"]:not(:checked).tableCheckbox, [type="checkbox"]:checked.tableCheckbox {
+  pointer-events: none;
+}
+
+[type="radio"]:not(:checked), [type="radio"]:checked {
+  position:relative;
+  opacity: 100;
+}
+
+#modal {
+  display: none; 
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 450px; 
+}
+
+#modal.active{
+  display:block;
+}
+    
+.modal-content.active {
+  display:block;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.loginButton {
+  width: 100px;
+}
+
+.refereeModalText {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.statusTableTitle {
+  font-size: 32px;
+  font-weight: bold;
+}
