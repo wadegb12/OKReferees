@@ -128,7 +128,7 @@
             else if($this->exceptionHandler->isMysqliException($this->statusData)) {
                 $this->mysqlExcption = $this->statusData;
                 
-                if($this->doesTableExist())
+                if(!$this->doesTableExist())
                 {
                     $this->table->setColumnConfig($this->blankTableColumns);
                     $table = $this->table->createDataTable([]);
