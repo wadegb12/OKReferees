@@ -31,4 +31,10 @@
         {
             return "SELECT full_name FROM Status";
         }
+
+        public function getAllStatuses()
+        {
+            return "SELECT * FROM Status";
+        }
+
     }

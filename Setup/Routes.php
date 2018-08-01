@@ -13,6 +13,7 @@
 
 
         new Route('/addReferee' ,'RefereeStatusController', 'addRefereeAction'),
+        new Route('/lookupReferee' ,'RefereeStatusController', 'lookupRefereeAction'),
     );
 
     $routes = $routesList;

@@ -59,27 +59,67 @@
             $getAllRefereesInTableQuery = $this->queries->getAllRefereeNames();
             $allRefereesInTable = $this->db->exeQuery($getAllRefereesInTableQuery);
             
-            foreach($allRefereesInTable as $namesInTable)
+            if($this->doesRefereeExist($allRefereesInTable, $refereeName))
             {
-                if(strtoupper($namesInTable['full_name']) === strtoupper($refereeName))
-                {
-                    $newReferee = false;
-                    $errorMessage = 'Referee already exits';
-                }
+                $errorMessage = 'Referee already exits';
             }
-
-            if($newReferee)
-            {
+            else {
                 $addRefereeQuery = $this->queries->addReferee($refereeName, $grade);
                 $status = $this->db->exeQuery($addRefereeQuery);
     
                 if(!$status) {
                     $errorMessage = 'Error adding referee';
                 }
-            }
+            }  
             
-
             echo json_encode(['status' => $status, 'errorMessage' => $errorMessage]);
+        }
+
+        public function lookupRefereeAction()
+        {
+            $status = false;
+            $newReferee = true;
+            $errorMessage = "";
+            $targetReferee = [];
+            $refereeName = trim($_POST['refereeName']);
+
+            $statusTableDataQuery = $this->queries->getAllStatuses();
+            $statusTableData = $this->db->exeQuery($statusTableDataQuery);
+
+            if($this->doesRefereeExist($statusTableData, $refereeName))
+            {
+                $newReferee = false;
+                $targetReferee = $this->getRefereeFromTable($statusTableData, $refereeName);
+                $errorMessage = '';
+            }
+            else {
+                $errorMessage = 'Could not find: ' . $refereeName;
+            }  
+
+            echo json_encode(['status' => !$newReferee, 'errorMessage' => $errorMessage, 'targetReferee' => $targetReferee]);
+        }
+
+        private function getRefereeFromTable($statusTableData, $refereeName) {
+            foreach($statusTableData as $tableData)
+            {
+                if(strtoupper($tableData['full_name']) === strtoupper($refereeName))
+                {
+                    return $tableData;
+                }
+            }
+            return [];
+        }
+
+        private function doesRefereeExist($statusTableData, $refereeName) {
+            
+            foreach($statusTableData as $tableData)
+            {
+                if(strtoupper($tableData['full_name']) === strtoupper($refereeName))
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         private function getRefereeAssessments() {
