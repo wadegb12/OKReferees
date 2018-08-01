@@ -3,8 +3,6 @@ $(document).ready( function () {
     $('#addRefereeHTML').hide();
     $('#editRefereeHMTL').hide();
 
-    // $('#status_table_length').hide();
-
     $('#addRefereeBtn').click(function() {
         $("#addRefereeModal").addClass("active");
     });
@@ -27,9 +25,6 @@ $(document).ready( function () {
 
         var refereeName = $('[name="refereeName"]').val();
         var refereeGrade = $('[name="refereeGrade"]').val();
-
-        // console.log("Name: " + refereeName);
-        // console.log("Grade: " + refereeGrade);
 
         if(refereeGrade.length <= 2 && refereeName.length > 1)
         {
@@ -55,9 +50,7 @@ $(document).ready( function () {
         else {
             $('.addRefereeErrorMsg').text('Please enter a valid referee and grade');
             $('.addRefereeErrorMsg').css('color', 'red');
-        }
-          
-          
+        }  
     });
 
     $('#updateRefereeBtn').click(function() {
