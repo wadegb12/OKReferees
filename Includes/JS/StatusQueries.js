@@ -46,7 +46,7 @@ $(document).ready( function () {
                         // table.ajax.api().reload();
                     }
                     else {
-                        $('.addRefereeErrorMsg').text('Error adding referee');
+                        $('.addRefereeErrorMsg').text(result.errorMessage);
                         $('.addRefereeErrorMsg').css('color', 'red');
                     }
                 }
