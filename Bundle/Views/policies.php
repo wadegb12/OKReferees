@@ -56,7 +56,7 @@
         <p>To Obtain:</p>
         <div class="a">
           <ul class="disc">
-            <li>Minimum age of 12 on January 1 of the registration year.</li>
+            <li>Must be 12 years old by the start of the referee course.</li>
             <li>Attend Grade 9 Referee Clinic</li>
             <li>Pay Grade 9 Referee Registration</li>
             <li>Pass the written Grade 9 test with a minimum 80%</li>
@@ -668,7 +668,7 @@
         </table>
         <p><strong>All Registration Fees are tied to US Soccer and will change as they change their fees.</strong></p>
         <br>
-        <p><i>Last updated July 21st 2018</i></p>
+        <p><i>Last updated October 15th 2018</i></p>
     </div>
   </div>
 </div>
