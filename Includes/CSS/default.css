@@ -93,3 +93,13 @@ nav.nav-center ul li a {
   text-decoration: none;
   cursor: pointer;
 }
+/* added for policies page*/
+ul.disc{
+  list-style-type:disc
+}
+div.a{
+  margin-left: 50px;
+}
+th, td {
+  padding: 3 px;
+}
