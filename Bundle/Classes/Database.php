@@ -1,14 +1,14 @@
 <?php   
     class Database {
 
-        // private $SERVER_NAME = "23.229.183.230:3306";
-        // private $DB_NAME = "RefereeTracking";
-        // private $USERNAME = "refereeAdm";
-        // private $PASSWORD = "WOll3yD3r";
-        private $SERVER_NAME = "localhost:3306";
-        private $DB_NAME = "local_referee_tracking";
-        private $USERNAME = "root";
-        private $PASSWORD = "Anorakleet12";
+        private $SERVER_NAME = "23.229.183.230:3306";
+        private $DB_NAME = "RefereeTracking";
+        private $USERNAME = "refereeAdm";
+        private $PASSWORD = "WOll3yD3r";
+        // private $SERVER_NAME = "localhost:3306";
+        // private $DB_NAME = "local_referee_tracking";
+        // private $USERNAME = "root";
+        // private $PASSWORD = "Anorakleet12";
 
         public $conn;
         public $error;

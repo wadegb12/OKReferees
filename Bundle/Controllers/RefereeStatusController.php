@@ -188,7 +188,7 @@
             else if($this->exceptionHandler->isMysqliException($this->statusData)) {
                 $this->mysqlExcption = $this->statusData;
                 
-                if($this->doesTableExist())
+                if(!$this->doesTableExist())
                 {
                     $this->table->setColumnConfig($this->blankTableColumns);
                     $table = $this->table->createDataTable([]);
@@ -230,12 +230,16 @@
             
             <div class="hide-on-med-and-down container grayBackground">
                 <div class="borderPadding">
-                    <div><?php echo "Error: " . $this->error ?></div>
-                    <div><?php echo "Mysql Error: " . $this->mysqlExcption ?></div>
+
+                    
+                    
+                    <!--
+                    <div><?php //echo "Mysql Error: " . $this->mysqlExcption ?></div>
                     <div class="linePadding">
                         <?php echo $this->interactiveQueriesHTML ?>
                     </div>
                     <div class="statusTableTitle"> Status Table</div>
+                    <div><?php echo $this->error ?></div>
                     <div><?php echo $this->statusTable ?></div>
                     
                 </div>
