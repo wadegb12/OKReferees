@@ -6,24 +6,35 @@
         }
 
         public function getStatuses() {
-            $statusesQuery = "SELECT id, full_name as 'Name', grade as 'Grade', recert as 'Recert Clinic', ";
-            $statusesQuery .= "written_test as 'Written Test', fitness as 'Fitness Test', ";
-            $statusesQuery .= "game_log as 'Game Log', upgrade_clinic as 'Upgrade Clinic' ";
-            $statusesQuery .= "FROM Status";
+            $query = "SELECT id, full_name as 'Name', grade as 'Grade', recert as 'Recert Clinic', ";
+            $query .= "written_test as 'Written Test', fitness as 'Fitness Test', ";
+            $query .= "game_log as 'Game Log', upgrade_clinic as 'Upgrade Clinic' ";
+            $query .= "FROM Status";
 
-            return $statusesQuery;
+            return $query;
         }
     
         public function addReferee($refereeName, $grade)
         {
             $date = date('Y');
 
-            $statusesQuery = "INSERT INTO Status ";
-            $statusesQuery .= "(cert_year, full_name, grade, written_test, written_test_score, fitness, ";
-            $statusesQuery .= "fitness_date, fitness_city, game_log, recert, upgrade_clinic) ";
-            $statusesQuery .= "VALUES ('$date', '$refereeName', '$grade', "; 
-            $statusesQuery .= "0, 0, 0, 0000-00-00, 'a' , 0, 0, 0)"; 
+            $query = "INSERT INTO Status ";
+            $query .= "(cert_year, full_name, grade, written_test, written_test_score, fitness, ";
+            $query .= "fitness_date, fitness_city, game_log, recert, upgrade_clinic) ";
+            $query .= "VALUES ('$date', '$refereeName', '$grade', "; 
+            $query .= "0, 0, 0, 0000-00-00, 'a' , 0, 0, 0)"; 
 
-            return $statusesQuery;
+            return $query;
         }
+
+        public function getAllRefereeNames()
+        {
+            return "SELECT full_name FROM Status";
+        }
+
+        public function getAllStatuses()
+        {
+            return "SELECT * FROM Status";
+        }
+
     }

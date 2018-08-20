@@ -3,8 +3,6 @@ $(document).ready( function () {
     $('#addRefereeHTML').hide();
     $('#editRefereeHMTL').hide();
 
-    // $('#status_table_length').hide();
-
     $('#addRefereeBtn').click(function() {
         $("#addRefereeModal").addClass("active");
     });
@@ -13,25 +11,13 @@ $(document).ready( function () {
         $('#addAssessmentHTML').toggle();
     });
 
-    $('#lookUpRefereeBtn').click(function() {
-        $("#editRefereeModal").addClass("active");
-        $('#addAssessmentHTML').hide();
-        
-        var refereeName = $('[name="searchRefereeName"]').val();
-        $('[name="refereeDisplayed"]').text(refereeName);
-
-    });
-
     $('#submitReferee').click(function() {
         $('[name="refereeDisplayed"]').text("");
 
         var refereeName = $('[name="refereeName"]').val();
         var refereeGrade = $('[name="refereeGrade"]').val();
 
-        // console.log("Name: " + refereeName);
-        // console.log("Grade: " + refereeGrade);
-
-        if(refereeGrade.length <= 2 && refereeName.length > 1)
+        if(isValidRefereeInfo(refereeName, refereeGrade))
         {
             $.ajax({
                 url: "addReferee",
@@ -46,18 +32,39 @@ $(document).ready( function () {
                         // table.ajax.api().reload();
                     }
                     else {
-                        $('.addRefereeErrorMsg').text('Error adding referee');
-                        $('.addRefereeErrorMsg').css('color', 'red');
+                        editErrorMsg('addRefereeErrorMsg', result.errorMessage);
                     }
                 }
               });
         }
         else {
-            $('.addRefereeErrorMsg').text('Please enter a valid referee and grade');
-            $('.addRefereeErrorMsg').css('color', 'red');
-        }
-          
-          
+            editErrorMsg('addRefereeErrorMsg', 'Please enter a valid referee and grade');
+        }  
+    });
+    
+    $('#lookUpRefereeBtn').click(function() {
+        var refereeName = $('[name="searchRefereeName"]').val();
+
+        $.ajax({
+            url: "lookupReferee",
+            type: "POST",
+            dataType: 'JSON',
+            data: {refereeName : refereeName},
+            success: function(result) {
+                if(result.status) {
+                    $('.addRefereeErrorMsg').text('');
+                    $('.lookupRefereeErrorMsg').text('');
+                    $("#addRefereeModal").removeClass("active");
+                    $("#editRefereeModal").addClass("active");
+                    $('#addAssessmentHTML').hide();
+                    $('[name="refereeDisplayed"]').text(refereeName);
+                    showRefereeInfo(result.targetReferee);
+                }
+                else {
+                    editErrorMsg('lookupRefereeErrorMsg', result.errorMessage);
+                }
+            }
+          });
     });
 
     $('#updateRefereeBtn').click(function() {
@@ -85,5 +92,20 @@ $(document).ready( function () {
         // console.log("assessmentScore: " + assessmentScore);
         // console.log("assessmentPosition: " + assessmentPosition);
     });
+
+    
     
 } );
+
+function showRefereeInfo(refereeData) {
+
+}
+
+function isValidRefereeInfo(refereeName, refereeGrade) {
+    return refereeGrade.trim().length <= 2 && refereeGrade.trim().length >= 1 && refereeName.trim().length > 1;
+}
+
+function editErrorMsg(classToEdit, message) {
+    $('.' + classToEdit).text(message);
+    $('.' + classToEdit).css('color', 'red');
+}

@@ -37,7 +37,7 @@
                 
                 $this->statusTable = $this->createStatusTable($this->statusTableData);
 
-                // $this->interactiveQueriesHTML = $this->interactiveStatusQueries->getInteractiveQueryHTML();
+                $this->interactiveQueriesHTML = $this->interactiveStatusQueries->getInteractiveQueryHTML();
             }
             else {
                 $this->error = "Could not connect to Database";
@@ -49,17 +49,78 @@
 
         public function addRefereeAction()
         {
-            $refereeName = $_POST['refereeName'];
-            $grade = $_POST['refereeGrade'];
-            
-            $addRefereeQuery = $this->queries->addReferee($refereeName, $grade);
-            $status = $this->db->exeQuery($addRefereeQuery);
+            $status = false;
+            $newReferee = true;
+            $errorMessage = "";
 
-            echo json_encode(['status' => $status]);
+            $refereeName = trim($_POST['refereeName']);
+            $grade = trim($_POST['refereeGrade']);
+
+            $getAllRefereesInTableQuery = $this->queries->getAllRefereeNames();
+            $allRefereesInTable = $this->db->exeQuery($getAllRefereesInTableQuery);
+            
+            if($this->doesRefereeExist($allRefereesInTable, $refereeName))
+            {
+                $errorMessage = 'Referee already exits';
+            }
+            else {
+                $addRefereeQuery = $this->queries->addReferee($refereeName, $grade);
+                $status = $this->db->exeQuery($addRefereeQuery);
+    
+                if(!$status) {
+                    $errorMessage = 'Error adding referee';
+                }
+            }  
+            
+            echo json_encode(['status' => $status, 'errorMessage' => $errorMessage]);
         }
 
+        public function lookupRefereeAction()
+        {
+            $status = false;
+            $newReferee = true;
+            $errorMessage = "";
+            $targetReferee = [];
+            $refereeName = trim($_POST['refereeName']);
 
+            $statusTableDataQuery = $this->queries->getAllStatuses();
+            $statusTableData = $this->db->exeQuery($statusTableDataQuery);
 
+            if($this->doesRefereeExist($statusTableData, $refereeName))
+            {
+                $newReferee = false;
+                $targetReferee = $this->getRefereeFromTable($statusTableData, $refereeName);
+                $errorMessage = '';
+            }
+            else {
+                $errorMessage = 'Could not find: ' . $refereeName;
+            }  
+
+            echo json_encode(['status' => !$newReferee, 'errorMessage' => $errorMessage, 'targetReferee' => $targetReferee]);
+        }
+
+        private function getRefereeFromTable($statusTableData, $refereeName) {
+            foreach($statusTableData as $tableData)
+            {
+                if(strtoupper($tableData['full_name']) === strtoupper($refereeName))
+                {
+                    return $tableData;
+                }
+            }
+            return [];
+        }
+
+        private function doesRefereeExist($statusTableData, $refereeName) {
+            
+            foreach($statusTableData as $tableData)
+            {
+                if(strtoupper($tableData['full_name']) === strtoupper($refereeName))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
 
         private function getRefereeAssessments() {
             $assessments = array();
@@ -100,7 +161,6 @@
                 }
             }
             
-
             return $mergedArray;
         }
 
@@ -170,14 +230,14 @@
             
             <div class="hide-on-med-and-down container grayBackground">
                 <div class="borderPadding">
+
                     
                     
                     <!--
                     <div><?php //echo "Mysql Error: " . $this->mysqlExcption ?></div>
                     <div class="linePadding">
-                        <?php //echo $this->interactiveQueriesHTML ?>
+                        <?php echo $this->interactiveQueriesHTML ?>
                     </div>
-                    -->
                     <div class="statusTableTitle"> Status Table</div>
                     <div><?php echo $this->error ?></div>
                     <div><?php echo $this->statusTable ?></div>

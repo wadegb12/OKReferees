@@ -16,13 +16,15 @@
       <p>September 22<sup>nd</sup> &ndash; 23<sup>rd</sup> &ndash; SRPL @ Mohawk Sports Complex</p>
       <p>&nbsp;</p>
       <p><strong><u>OCTOBER</u></strong></p>
+      <p>October 5<sup>th</sup>-7<sup>th</sup> &ndash; Catoosa Soccer Association Tournament</p>
       <p>October 6<sup>th</sup> &ndash; OPL Festival Play TBD</p>
       <p>October 13<sup>th</sup> &ndash; Tournament of Champions TBD</p>
       <p>&nbsp;</p>
       <p><strong><u>NOVEMBER</u></strong></p>
       <p>November 9<sup>th</sup> &ndash; 11<sup>th</sup> &ndash; OPL Festival Play TBD</p>
       <p>&nbsp;</p>
-      <p><em>A list of tournaments can be found <a href="http://www.oksoccer.com/tournaments/tournaments/">here</a>.</em></p>
+      <p><em>A list of OSA tournaments can be found <a href="http://www.oksoccer.com/tournaments/tournaments/">here</a> and OPC tournaments <a href="http://www.okpremierclubs.com/home.php?layout=4856305">here</a>.</em></p>
+      <p><em>Requests for additions to this website must be submitted to the Oklahoma SRC</em></p>
     </div>
   </div>
 </div>

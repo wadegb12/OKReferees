@@ -70,6 +70,7 @@
                     
                     <a id="lookUpRefereeBtn" class="btn inline"> Look Up</a>
                 </div>
+                <div class="lookupRefereeErrorMsg"> </div>
             </div>
 
             <?php return ob_get_clean(); 
