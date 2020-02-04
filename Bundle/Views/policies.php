@@ -2,6 +2,9 @@
     include(dirname(__FILE__). '/default.php'); 
   ?>
 
+<p>Comming Soon</p>
+<!--
+
   <div class="container  hide-on-med-and-down">
     <div class="left grayBackground containerPadding">
       <div class="linePadding">
@@ -672,3 +675,4 @@
     </div>
   </div>
 </div>
+-->

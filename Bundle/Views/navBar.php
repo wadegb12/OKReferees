@@ -2,11 +2,11 @@
   <div class="container">
 
     <ul id="rulesDropdown" class="dropdown-content">
-      <li><a href="comingSoon"><div class="navBarText"> SRPL </div></a></li>
-      <li><a href="comingSoon"><div class="navBarText"> OPL/OCL </div></a></li>
-      <li><a href="comingSoon"><div class="navBarText"> OPC </div></a></li>
-      <li><a href="comingSoon"><div class="navBarText"> ECNL </div></a></li>
-      <li><a href="comingSoon"><div class="navBarText"> Rec\Small Sided </div></a></li>
+      <li><a href="comingSoon"><div class="navBarTextSm"> SRPL </div></a></li>
+      <li><a href="comingSoon"><div class="navBarTextSm"> OPL/OCL </div></a></li>
+      <li><a href="comingSoon"><div class="navBarTextSm"> OPC </div></a></li>
+      <li><a href="comingSoon"><div class="navBarTextSm"> ECNL </div></a></li>
+      <li><a href="comingSoon"><div class="navBarTextSm"> Rec\Small Sided </div></a></li>
     </ul>
      <ul id="navBar">
         <li><a href="home"><div class="navBarText"> Home </div></a></li>
@@ -18,9 +18,9 @@
           </a>
         </li>
         <li><a href="srcContacts"><div class="navBarText"> SRC Info </div></a></li>
-        <li><a href="comingSoon"><div class="navBarText"> Upgrade </div></a></li>
-        <li><a href="refereeStatus"><div class="navBarText"> Referee Status </div></a></li>
-        <li><a href="comingSoon"><div class="navBarText"> Evaluations </div></a></li>
+        <li><a href="upgrade"><div class="navBarText"> Upgrade </div></a></li>
+        <!-- <li><a href="refereeStatus"><div class="navBarText"> Referee Status </div></a></li>
+        <li><a href="comingSoon"><div class="navBarText"> Evaluations </div></a></li> -->
         <li><a href="links"><div class="navBarText"> Links </div></a></li>
      </ul>
 

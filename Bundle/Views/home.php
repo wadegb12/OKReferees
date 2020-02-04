@@ -5,23 +5,23 @@
 <div class="hide-on-med-and-down container">
   <div class="container grayBackground containerPadding grayBackground">
     <div class="linePadding">
-      <p3>Upcoming Events</p3>
+      <h3><center><strong>Upcoming Events</strong></center></h3>
       <p>&nbsp;</p>
-      <p><strong><u>AUGUST</u></strong></p>
-      <p>August 4<sup>th</sup> - Upper Level Fitness Test @ Memorial HS, Tulsa OK</p>
+      <p><strong><u>Feburary</u></strong></p>
+      <p>Feburary 8<sup>th</sup> - PRO Fitness Test @ Bishop Kelly HS, Tulsa OK</p>
+      <p>Feburary 22<sup>nd</sup> - Regional Upgrade Class @ TBA</p>
       <p>&nbsp;</p>
-      <p><strong><u>SEPTEMBER</u></strong></p>
-      <p>September 1<sup>st</sup> &ndash; 2<sup>nd</sup> &ndash; SPRL @ Edmond Soccer Club</p>
-      <p>September 15<sup>th</sup> &ndash; OPL Festival Play TBD</p>
-      <p>September 22<sup>nd</sup> &ndash; 23<sup>rd</sup> &ndash; SRPL @ Mohawk Sports Complex</p>
+      <p><strong><u>March</u></strong></p>
+      <p>March 28<sup>th</sup> &ndash; 29<sup>th</sup> &ndash; Frontieer Conferenc Games @ Edmond Soccer Club</p>
       <p>&nbsp;</p>
-      <p><strong><u>OCTOBER</u></strong></p>
-      <p>October 5<sup>th</sup>-7<sup>th</sup> &ndash; Catoosa Soccer Association Tournament</p>
-      <p>October 6<sup>th</sup> &ndash; OPL Festival Play TBD</p>
-      <p>October 13<sup>th</sup> &ndash; Tournament of Champions TBD</p>
+      <p><strong><u>April</u></strong></p>
+      <p>April 4<sup>th</sup> &ndash; 5<sup>th</sup> &ndash; Frontieer Conferenc Games @ Morhaw SC or Bixby SC in Tulsa, OK</p>
+      <p>April 18<sup>th</sup> &ndash; 19<sup>th</sup> &ndash; State Rec Tournament @ TBA</p>
+      <p>April 25<sup>th</sup> &ndash; 26<sup>th</sup> &ndash; Adult State Tournament @ TBA</p>
       <p>&nbsp;</p>
-      <p><strong><u>NOVEMBER</u></strong></p>
-      <p>November 9<sup>th</sup> &ndash; 11<sup>th</sup> &ndash; OPL Festival Play TBD</p>
+      <p><strong><u>May</u></strong></p>
+      <p>May 15<sup>th &ndash; </sup> 17<sup>th</sup> &ndash; U11-U19 Prelims @ Mohawk Sports Complex, Tulsa OK</p>
+      <p>May 22<sup>nd &ndash; </sup> 24<sup>th</sup> &ndash; U11-U19 Finals @ Edmond Soccer Club, Edmond OK</p>
       <p>&nbsp;</p>
       <p><em>A list of OSA tournaments can be found <a href="http://www.oksoccer.com/tournaments/tournaments/">here</a> and OPC tournaments <a href="http://www.okpremierclubs.com/home.php?layout=4856305">here</a>.</em></p>
       <p><em>Requests for additions to this website must be submitted to the Oklahoma SRC</em></p>

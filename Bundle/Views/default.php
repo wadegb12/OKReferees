@@ -3,11 +3,11 @@
   <html>
     <head>
       <link type="text/css" rel="Stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css"/>
-      <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" >
+      <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
       <link type="text/css" rel="stylesheet" href="../Includes/materialize/css/materialize.min.css"  media="screen,projection"/>
-      <link type="text/css" rel="stylesheet" href="../Includes/CSS/default.css">
+      <link type="text/css" rel="stylesheet" href="../Includes/CSS/default.css"/>
       <link type="text/css" rel="stylesheet" href="../Includes/CSS/datatables.min.css"/>
-      <link type="text/css" rel="stylesheet" href="../Includes/CSS/Utilities.css">
+      <link type="text/css" rel="stylesheet" href="../Includes/CSS/Utilities.css"/>
     </head>
 
     <body>

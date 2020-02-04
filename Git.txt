@@ -1,0 +1,18 @@
+git checkout master
+git pull --rebase
+git checkout Crockett
+git merge --no-ff master
+
+Apache Commands
+sudo apachectl start
+sudo apachectl stop
+sudo apachectl -k restart
+
+Apache Log
+tail -f /private/var/log/apache2/error_log
+
+MYSQL
+/usr/local/mysql/bin/mysql -u root -p
+sudo /usr/local/mysql/support-files/mysql.server start
+sudo /usr/local/mysql/support-files/mysql.server stop
+sudo /usr/local/mysql/support-files/mysql.server restart

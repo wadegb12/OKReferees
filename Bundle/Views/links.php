@@ -16,5 +16,14 @@
     <div class="linePadding">
       <a href="https://idevforms.americaneagle.com/oklahomasa/form509128109/secure_index.html"> Misconduct Form </a>
     </div>
+    <div class="linePadding">
+      <a href="https://www.ussoccer.com/referee-program"> US Soccer Referee Program </a>
+    </div>
+    <div class="linePadding">
+      <a href="https://learning.ussoccer.com/referee/"> US Soccer Referee Learning Center </a>
+    </div>
+    <div class="linePadding">
+      <a href="http://proreferees.com/"> PRO </a>
+    </div>
   </div>
 </div>
