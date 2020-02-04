@@ -16,7 +16,7 @@
     </div>
     <div class="col s4">
       <div class="center">
-        <img class="srcPhoto" src="/../../Includes/Photos/GeorgeFreedman.JPG">
+        <img class="srcPhoto" src="/../../Includes/Photos/GeorgeFreedman.jpg">
       </div>
     </div>
     <div class="col s2"></div>
@@ -34,7 +34,7 @@
     </div>
     <div class="col s4">
       <div class="center">
-        <img class="srcPhoto" src="/../../Includes/Photos/JackDamrill.jpg">
+        <img class="srcPhoto" src="/../../Includes/Photos/JackDamrill.JPG">
       </div>
     </div>
     <div class="col s2"></div>
@@ -52,7 +52,7 @@
     </div>
     <div class="col s4">
       <div class="center">
-        <img class="srcPhoto" src="/../../Includes/Photos/JamesCrabbe.jpg">
+        <img class="srcPhoto" src="/../../Includes/Photos/JamesCrabbe.JPG">
       </div>
     </div>
     <div class="col s2"></div>
@@ -88,7 +88,7 @@
     </div>
     <div class="col s4">
       <div class="center">
-        <img class="srcPhoto" src="/../../Includes/Photos/DavidMoore.JPG">
+        <img class="srcPhoto" src="/../../Includes/Photos/DavidMoore.jpg">
       </div>
     </div>
     <div class="col s2"></div>
@@ -106,7 +106,7 @@
     </div>
     <div class="col s4">
       <div class="center">
-        <img class="srcPhoto" src="/../../Includes/Photos/JeremyCrockett.JPG">
+        <img class="srcPhoto" src="/../../Includes/Photos/JeremyCrockett.jpg">
       </div>
     </div>
     <div class="col s2"></div>
